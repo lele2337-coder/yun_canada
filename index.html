@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>加拿大行程 2026/4/24–5/2</title>
+<meta name="description" content="Vancouver × Banff 9天行程，含地圖、時鐘、匯率、行前清單">
+<meta name="theme-color" content="#dc2626">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="加拿大行程">
+<meta property="og:title" content="🍁 加拿大行程 2026">
+<meta property="og:description" content="Vancouver × Banff 9天行程">
+<link rel="manifest" href="manifest.json">
+<style>
+:root {
+  --bg: #f0f4f8;
+  --card: #ffffff;
+  --text: #1f2937;
+  --sub: #4b5563;
+  --muted: #9ca3af;
+  --red: #dc2626;
+  --red-light: #fef2f2;
+  --section-bg: #f8fafc;
+  --border: #e5e7eb;
+  --shadow: 0 4px 20px rgba(0,0,0,0.07);
+  --today: #fef9c3;
+  --today-border: #eab308;
+}
+[data-theme="dark"] {
+  --bg: #111827;
+  --card: #1f2937;
+  --text: #f9fafb;
+  --sub: #d1d5db;
+  --muted: #6b7280;
+  --red: #f87171;
+  --red-light: #3b1515;
+  --section-bg: #111827;
+  --border: #374151;
+  --shadow: 0 4px 20px rgba(0,0,0,0.4);
+  --today: #3b3000;
+  --today-border: #ca8a04;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, "Segoe UI", "Microsoft JhengHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding-bottom: 60px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ── Mobile Touch Optimizations ── */
+@media (max-width: 640px) {
+  body { padding-bottom: 80px; }
+  header h1 { font-size: 1.6em; }
+  .day { padding: 18px 14px; }
+  .day h2 { font-size: 1.1em; }
+  .section { padding: 11px 13px; }
+  .pretask-card, .checklist-card, .currency-card, .overview { padding: 16px 14px; }
+  .map-btn { padding: 6px 13px; font-size: 0.82em; margin-top: 8px; display: inline-block; }
+  .currency-row input, .currency-row select { font-size: 1em; padding: 10px 12px; }
+  .dark-toggle { padding: 6px 12px; }
+  .pretask-item { padding: 10px 8px; gap: 8px; }
+  .pretask-item .task-name { font-size: 0.95em; }
+  .checklist-item { padding: 7px 2px; }
+}
+/* Ensure tap targets are large enough */
+.map-btn, .btn-sm, .dark-toggle, .daynav a {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Prevent text size adjust on rotation */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* ── Top Bar ── */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 50px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+.topbar::-webkit-scrollbar { display: none; }
+.topbar-title { font-weight: 700; color: var(--red); flex-shrink: 0; margin-right: 4px; }
+.daynav {
+  display: inline-flex;
+  gap: 6px;
+}
+.daynav a {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--section-bg);
+  color: var(--sub);
+  font-size: 0.82em;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.daynav a:hover, .daynav a.active { background: var(--red); color: white; border-color: var(--red); }
+.topbar-spacer { flex: 1; }
+.dark-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 4px 10px;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 0.85em;
+  flex-shrink: 0;
+}
+
+.container { max-width: 900px; margin: 0 auto; padding: 20px 16px; }
+
+/* ── Header ── */
+header {
+  text-align: center;
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #b91c1c 100%);
+  color: white;
+  padding: 32px 20px 24px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(220,38,38,0.25);
+  position: relative;
+  overflow: hidden;
+}
+header::before {
+  content: "🍁";
+  position: absolute;
+  font-size: 120px;
+  opacity: 0.08;
+  top: -20px;
+  right: -10px;
+}
+header h1 { font-size: 2em; margin-bottom: 6px; }
+header p { opacity: 0.9; font-size: 1em; }
+.countdown {
+  margin-top: 16px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.countdown span { font-size: 1.8em; display: block; }
+
+/* ── Info Strip ── */
+.infostrip {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+@media(max-width:600px){ .infostrip { grid-template-columns: 1fr; } }
+.info-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.info-card .label { font-size: 0.78em; color: var(--muted); margin-bottom: 4px; }
+.info-card .value { font-size: 1.3em; font-weight: 700; color: var(--text); }
+.info-card .sub-value { font-size: 0.8em; color: var(--muted); }
+
+/* ── Currency ── */
+.currency-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+.currency-card h2 { color: var(--red); margin-bottom: 14px; font-size: 1.1em; }
+.currency-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.currency-row input {
+  flex: 1; min-width: 100px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 1em;
+  background: var(--section-bg);
+  color: var(--text);
+}
+.currency-row select {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: var(--section-bg);
+  color: var(--text);
+  cursor: pointer;
+}
+.currency-result { margin-top: 10px; font-size: 1.1em; font-weight: 600; color: var(--red); }
+.rate-note { font-size: 0.78em; color: var(--muted); margin-top: 4px; }
+
+/* ── Overview ── */
+.overview {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+.overview h2 { margin-bottom: 14px; color: var(--red); }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+th { background: var(--red-light); color: var(--red); font-size: 0.9em; }
+tr:hover td { background: var(--section-bg); }
+tr.today-row td { background: var(--today); font-weight: 600; }
+.overview-link { text-decoration: none; color: var(--sub); }
+.overview-link:hover { color: var(--red); }
+
+/* ── Day Cards ── */
+.day {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--red);
+  scroll-margin-top: 60px;
+  transition: border-color 0.3s;
+}
+.day.today { border-left-color: var(--today-border); background: var(--today); }
+.day h2 {
+  color: var(--red);
+  margin-bottom: 16px;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.today-badge {
+  display: none;
+  background: #eab308;
+  color: white;
+  font-size: 0.65em;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+.day.today .today-badge { display: inline-block; }
+.section {
+  background: var(--section-bg);
+  padding: 13px 16px;
+  border-radius: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--border);
+}
+.section h3 { font-size: 1em; margin-bottom: 6px; color: var(--text); }
+.section p { color: var(--sub); margin: 3px 0; font-size: 0.95em; }
+ul { margin-left: 18px; color: var(--sub); font-size: 0.95em; }
+li { margin: 3px 0; }
+.highlight { color: var(--red); font-weight: 600; }
+.map-btn {
+  display: inline-block;
+  margin-top: 7px;
+  background: var(--red);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78em;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.map-btn:hover { opacity: 0.85; }
+.map-btn + .map-btn { margin-left: 6px; }
+.time-badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.8em;
+  margin-left: 6px;
+}
+[data-theme="dark"] .time-badge { background: #1e3a5f; color: #93c5fd; }
+
+/* ── Pre-trip Tasks ── */
+.pretask-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+.pretask-card h2 { color: var(--red); margin-bottom: 6px; }
+.pretask-subtitle { font-size: 0.85em; color: var(--muted); margin-bottom: 16px; }
+.pretask-group { margin-bottom: 16px; }
+.pretask-group h3 { font-size: 0.88em; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid var(--border); padding-bottom: 4px; }
+.pretask-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin: 4px 0;
+  transition: background 0.15s;
+}
+.pretask-item:hover { background: var(--section-bg); }
+.pretask-item input[type=checkbox] {
+  width: 16px; height: 16px;
+  accent-color: var(--red);
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.pretask-item .task-info { flex: 1; }
+.pretask-item .task-name { font-size: 0.92em; color: var(--text); cursor: pointer; }
+.pretask-item .task-note { font-size: 0.78em; color: var(--muted); margin-top: 2px; }
+.pretask-item .task-link { font-size: 0.75em; }
+.pretask-item.done .task-name { text-decoration: line-through; opacity: 0.45; }
+.urgent-badge {
+  display: inline-block;
+  background: #dc2626;
+  color: white;
+  font-size: 0.68em;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.soon-badge {
+  display: inline-block;
+  background: #d97706;
+  color: white;
+  font-size: 0.68em;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.ok-badge {
+  display: inline-block;
+  background: #16a34a;
+  color: white;
+  font-size: 0.68em;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.pretask-progress { margin-bottom: 14px; }
+
+/* ── Checklist ── */
+.checklist-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+.checklist-card h2 { color: var(--red); margin-bottom: 14px; }
+.checklist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 20px;
+}
+@media(max-width:500px){ .checklist-grid { grid-template-columns: 1fr; } }
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: var(--sub);
+}
+.checklist-item input[type=checkbox] {
+  width: 16px; height: 16px;
+  accent-color: var(--red);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.checklist-item.done span { text-decoration: line-through; opacity: 0.5; }
+.checklist-actions { margin-top: 12px; display: flex; gap: 8px; }
+.btn-sm {
+  padding: 5px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--section-bg);
+  color: var(--sub);
+  cursor: pointer;
+  font-size: 0.82em;
+}
+.btn-sm:hover { background: var(--red); color: white; border-color: var(--red); }
+.checklist-progress { margin-top: 8px; }
+.progress-bar {
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+.progress-fill { height: 100%; background: var(--red); border-radius: 3px; transition: width 0.3s; }
+.progress-label { font-size: 0.78em; color: var(--muted); }
+
+/* ── Summary ── */
+.summary {
+  background: linear-gradient(135deg, #fef9c3, #fee2e2);
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 10px;
+}
+[data-theme="dark"] .summary { background: linear-gradient(135deg, #3b2f00, #3b1515); }
+.summary h2 { color: var(--red); margin-bottom: 14px; font-size: 1.2em; }
+.summary-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+@media(max-width:600px){ .summary-grid { grid-template-columns: 1fr; } }
+.summary-box h3 { font-size: 0.9em; margin-bottom: 8px; color: var(--text); }
+
+/* ── Footer ── */
+footer { text-align: center; color: var(--muted); font-size: 0.8em; margin-top: 24px; }
+</style>
+</head>
+<body>
+
+<!-- Sticky Nav Bar -->
+<div class="topbar">
+  <span class="topbar-title">🍁 加拿大</span>
+  <nav class="daynav">
+    <a href="#day1">Day 1</a>
+    <a href="#day2">Day 2</a>
+    <a href="#day3">Day 3</a>
+    <a href="#day4">Day 4</a>
+    <a href="#day5">Day 5</a>
+    <a href="#day6">Day 6</a>
+    <a href="#day7">Day 7</a>
+    <a href="#day8">Day 8</a>
+    <a href="#day9">Day 9</a>
+    <a href="#pretask">行前</a>
+    <a href="#checklist">行李</a>
+  </nav>
+  <span class="topbar-spacer"></span>
+  <button class="dark-toggle" onclick="toggleDark()">🌙 深色</button>
+</div>
+
+<div class="container">
+
+<!-- Header -->
+<header>
+  <h1>🍁 加拿大行程 🍁</h1>
+  <p>2026 / 4 / 24 → 5 / 2　·　Vancouver × Banff</p>
+  <div class="countdown">
+    <span id="countdown-num">—</span>
+    <span id="countdown-label" style="font-size:0.6em;font-weight:400;opacity:0.9">計算中…</span>
+  </div>
+</header>
+
+<!-- Info Strip: Time + Weather links -->
+<div class="infostrip">
+  <div class="info-card">
+    <div class="label">🕐 Vancouver 時間 (PDT)</div>
+    <div class="value" id="van-time">—</div>
+    <div class="sub-value" id="van-date">UTC−7</div>
+  </div>
+  <div class="info-card">
+    <div class="label">🏔️ Banff 時間 (MDT)</div>
+    <div class="value" id="banff-time">—</div>
+    <div class="sub-value" id="banff-date">UTC−6</div>
+  </div>
+  <div class="info-card">
+    <div class="label">🌤️ 天氣查詢</div>
+    <div class="value" style="font-size:1em;margin-top:4px">
+      <a class="map-btn" href="https://wttr.in/Vancouver" target="_blank">Vancouver</a>
+      <a class="map-btn" href="https://wttr.in/Banff" target="_blank">Banff</a>
+    </div>
+    <div class="sub-value">點擊查看預報</div>
+  </div>
+</div>
+
+<!-- Currency Converter -->
+<div class="currency-card">
+  <h2>💱 匯率換算</h2>
+  <div class="currency-row">
+    <input type="number" id="amount" value="100" placeholder="金額" oninput="convert()">
+    <select id="direction" onchange="convert()">
+      <option value="cad2twd">CAD → TWD</option>
+      <option value="twd2cad">TWD → CAD</option>
+    </select>
+  </div>
+  <div class="currency-result" id="converted">≈ 2,220 TWD</div>
+  <div class="rate-note">⚠️ 匯率為估算值（1 CAD ≈ 22.2 TWD），請出發前確認實際匯率</div>
+</div>
+
+<!-- Overview Table -->
+<div class="overview">
+  <h2>🧭 總行程總覽</h2>
+  <table>
+    <tr><th>日期</th><th>星期</th><th>地點</th><th>重點</th></tr>
+    <tr id="ov-d1"><td>4/24</td><td>五</td><td>Vancouver</td><td><a class="overview-link" href="#day1">抵達＋晚餐</a></td></tr>
+    <tr id="ov-d2"><td>4/25</td><td>六</td><td>Vancouver</td><td><a class="overview-link" href="#day2">市區經典一日</a></td></tr>
+    <tr id="ov-d3"><td>4/26</td><td>日</td><td>→ Banff</td><td><a class="overview-link" href="#day3">早餐＋飛機</a></td></tr>
+    <tr id="ov-d4"><td>4/27</td><td>一</td><td>Banff</td><td><a class="overview-link" href="#day4">市區＋纜車夕陽</a></td></tr>
+    <tr id="ov-d5"><td>4/28</td><td>二</td><td>Moraine Lake</td><td><a class="overview-link" href="#day5">接駁＋冰原大道 🔥</a></td></tr>
+    <tr id="ov-d6"><td>4/29</td><td>三</td><td>Vancouver</td><td><a class="overview-link" href="#day6">海邊＋晚餐</a></td></tr>
+    <tr id="ov-d7"><td>4/30</td><td>四</td><td>Sea to Sky</td><td><a class="overview-link" href="#day7">纜車＋森林 🔥</a></td></tr>
+    <tr id="ov-d8"><td>5/1</td><td>五</td><td>Vancouver</td><td><a class="overview-link" href="#day8">公園 or 吊橋</a></td></tr>
+    <tr id="ov-d9"><td>5/2</td><td>六</td><td>✈️</td><td><a class="overview-link" href="#day9">回台灣</a></td></tr>
+  </table>
+</div>
+
+<!-- Day 1 -->
+<div class="day" id="day1">
+  <h2>📅 Day 1 — 4/24　抵達 Vancouver <span class="today-badge">今天</span></h2>
+  <div class="section">
+    <h3>✈️ 抵達</h3>
+    <p>19:20 抵達 Vancouver International Airport</p>
+    <a class="map-btn" href="https://maps.google.com/?q=Vancouver+International+Airport" target="_blank">📍 地圖</a>
+  </div>
+  <div class="section">
+    <h3>🚗 機場 → 飯店</h3>
+    <p><span class="highlight">EXchange Hotel Vancouver</span></p>
+    <p>Uber：約 25–30 分　·　抵達約 20:30</p>
+    <a class="map-btn" href="https://maps.google.com/?q=EXchange+Hotel+Vancouver" target="_blank">📍 飯店地圖</a>
+  </div>
+  <div class="section">
+    <h3>🍽️ 晚餐（走路可達）</h3>
+    <ul>
+      <li>JOEY Bentall One　<a class="map-btn" href="https://maps.google.com/?q=JOEY+Bentall+One+Vancouver" target="_blank">📍</a></li>
+      <li>Cactus Club Cafe Coal Harbour　<a class="map-btn" href="https://maps.google.com/?q=Cactus+Club+Cafe+Coal+Harbour+Vancouver" target="_blank">📍</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Day 2 -->
+<div class="day" id="day2">
+  <h2>📅 Day 2 — 4/25　市區一日 <span class="today-badge">今天</span></h2>
+  <div class="section">
+    <h3>☀️ 上午：Gastown <span class="time-badge">09:00–10:00</span></h3>
+    <p>🚶‍♂️ 步行 10 分鐘</p>
+    <a class="map-btn" href="https://maps.google.com/?q=Gastown+Vancouver" target="_blank">📍 地圖</a>
+  </div>
+  <div class="section">
+    <h3>🛍️ 中午：Robson Street <span class="time-badge">11:00–13:30</span></h3>
+    <p>🚶‍♂️ 步行 15 分鐘</p>
+    <p><strong>午餐：</strong></p>
+    <ul>
+      <li>Breka Bakery & Cafe　<a class="map-btn" href="https://maps.google.com/?q=Breka+Bakery+Cafe+Vancouver" target="_blank">📍</a></li>
+      <li>Thierry Alberni　<a class="map-btn" href="https://maps.google.com/?q=Thierry+Patisserie+Vancouver" target="_blank">📍</a></li>
+    </ul>
+    <a class="map-btn" href="https://maps.google.com/?q=Robson+Street+Vancouver" target="_blank">📍 Robson Street</a>
+  </div>
+  <div class="section">
+    <h3>🚤 下午：Granville Island <span class="time-badge">14:30–17:00</span></h3>
+    <p>Uber 或搭小船（AquaBus）</p>
+    <a class="map-btn" href="https://maps.google.com/?q=Granville+Island+Vancouver" target="_blank">📍 地圖</a>
+  </div>
+</div>
+
+<!-- Day 3 -->
+<div class="day" id="day3">
+  <h2>📅 Day 3 — 4/26　飛 Banff <span class="today-badge">今天</span></h2>
+  <div class="section">
+    <h3>🍽️ 早餐</h3>
+    <ul>
+      <li>Cafe Medina　<a class="map-btn" href="https://maps.google.com/?q=Cafe+Medina+Vancouver" target="_blank">📍</a></li>
+      <li>49th Parallel Coffee　<a class="map-btn" href="https://maps.google.com/?q=49th+Parallel+Coffee+Vancouver" target="_blank">📍</a></li>
+    </ul>
+  </div>
+  <div class="section">
+    <h3>🚗 去機場 <span class="time-badge">07:30 出發</span></h3>
+    <p>07:30 Uber 出發　·　✈️ 10:40 起飛</p>
+    <a class="map-btn" href="https://maps.google.com/?q=Vancouver+International+Airport" target="_blank">📍 機場</a>
+  </div>
+</div>
+
+<!-- Day 4 -->
+<div class="day" id="day4">
+  <h2>📅 Day 4 — 4/27　Banff <span class="today-badge">今天</span></h2>
+  <div class="section">
+    <h3>🚗 Calgary → Banff（自駕，約 1.5 小時）</h3>
+    <a class="map-btn" href="https://maps.google.com/?q=Banff,+Alberta" target="_blank">📍 Banff</a>
+  </div>
+  <div class="section">
+    <h3>🛍️ Banff Avenue</h3>
+    <p>Arc'teryx / Patagonia / Canada Goose</p>
+    <a class="map-btn" href="https://maps.google.com/?q=Banff+Avenue+Banff+Alberta" target="_blank">📍 地圖</a>
+  </div>
+  <div class="section">
+    <h3>🍽️ 晚餐</h3>
+    <p>Park Distillery</p>
+    <a class="map-btn" href="https://maps.google.com/?q=Park+Distillery+Banff" target="_blank">📍 地圖</a>
+  </div>
+  <div class="section">
+    <h3>🚡 Banff Gondola（看夕陽）</h3>
+    <a class="map-btn" href="https://maps.google.com/?q=Banff+Gondola" target="_blank">📍 地圖</a>
+    <a class="map-btn" href="https://www.banffjaspercollection.com/attractions/banff-gondola/" target="_blank">🎟️ 訂票</a>
+  </div>
+</div>
+
+<!-- Day 5 -->
+<div class="day" id="day5">
+  <h2>📅 Day 5 — 4/28　Moraine Lake 🔥 <span class="today-badge">今天</span></h2>
+  <div class="section" style="border:2px solid #dc2626;background:var(--red-light)">
+    <h3>⚠️ 注意：需事先確認道路是否開放</h3>
+    <p style="font-size:0.88em;color:var(--sub)">Moraine Lake Road 歷年通常<strong>5月中旬才開放</strong>（積雪＋雪崩管制）。4/28 可能仍關閉，請在出發前至 Parks Canada 官網確認 2026 年實際開放日期，並預備備案行程（如 Lake Louise、Johnston Canyon 等）。</p>
+    <a class="map-btn" href="https://www.pc.gc.ca/en/pn-np/ab/banff/visit/parkbus/moraine" target="_blank">📋 確認開放狀態</a>
+  </div>
+  <div class="section">
+    <h3>🚐 Shuttle（必預約！）</h3>
+    <p>在 <strong>Lake Louise Ski Resort</strong> 上車搭接駁車</p>
+    <a class="map-btn" href="https://maps.google.com/?q=Lake+Louise+Ski+Resort+Alberta" target="_blank">📍 上車點</a>
+    <a class="map-btn" href="https://www.pc.gc.ca/en/pn-np/ab/banff/visit/parkbus" target="_blank">🎟️ 預約接駁</a>
+  </div>
+  <div class="section">
+    <h3>🏔️ Moraine Lake</h3>
+    <a class="map-btn" href="https://maps.google.com/?q=Moraine+Lake+Alberta" target="_blank">📍 地圖</a>
+  </div>
+  <div class="section">
+    <h3>🚗 冰原大道（Icefields Parkway）</h3>
+    <ul>
+      <li>Peyto Lake　<a class="map-btn" href="https://maps.google.com/?q=Peyto+Lake+Alberta" target="_blank">📍</a></li>
+      <li>Bow Lake　<a class="map-btn" href="https://maps.google.com/?q=Bow+Lake+Alberta" target="_blank">📍</a></li>
+    </ul>
+    <a class="map-btn" href="https://maps.google.com/?q=Icefields+Parkway+Alberta" target="_blank">📍 冰原大道</a>
+  </div>
+</div>
+
+<!-- Day 6 -->
+<div class="day" id="day6">
+  <h2>📅 Day 6 — 4/29　回 Vancouver <span class="today-badge">今天</span></h2>
+  <div class="section">
+    <h3>✈️ 抵達 Vancouver 17:35</h3>
+    <p><span class="highlight">Best Western Plus Sands</span></p>
+    <a class="map-btn" href="https://maps.google.com/?q=Best+Western+Plus+Sands+Vancouver" target="_blank">📍 飯店</a>
+  </div>
+  <div class="section">
+    <h3>🌊 English Bay（飯店就在旁邊）</h3>
+    <a class="map-btn" href="https://maps.google.com/?q=English+Bay+Beach+Vancouver" target="_blank">📍 地圖</a>
+  </div>
+  <div class="section">
+    <h3>🍽️ 晚餐</h3>
+    <p>Cactus Club Cafe English Bay</p>
+    <a class="map-btn" href="https://maps.google.com/?q=Cactus+Club+Cafe+English+Bay+Vancouver" target="_blank">📍 地圖</a>
+  </div>
+</div>
+
+<!-- Day 7 -->
+<div class="day" id="day7">
+  <h2>📅 Day 7 — 4/30　Sea to Sky + Capilano 🔥 <span class="today-badge">今天</span></h2>
+  <div class="section">
+    <h3>🚌 Sea to Sky Gondola（上午）</h3>
+    <a class="map-btn" href="https://maps.google.com/?q=Sea+to+Sky+Gondola+Squamish" target="_blank">📍 地圖</a>
+    <a class="map-btn" href="https://www.seatoskygondola.com/" target="_blank">🎟️ 訂票</a>
+  </div>
+  <div class="section">
+    <h3>🌲 下午：Capilano Suspension Bridge</h3>
+    <p style="font-size:0.85em;color:var(--muted);margin-top:4px">💡 市區有免費接駁巴士（Canada Place 出發），停車位極少建議搭接駁。票含 Cliffwalk + Treetops Adventure。</p>
+    <a class="map-btn" href="https://maps.google.com/?q=Capilano+Suspension+Bridge+Vancouver" target="_blank">📍 地圖</a>
+    <a class="map-btn" href="https://www.capbridge.com/" target="_blank">🎟️ 訂票</a>
+  </div>
+</div>
+
+<!-- Day 8 -->
+<div class="day" id="day8">
+  <h2>📅 Day 8 — 5/1　自由日 <span class="today-badge">今天</span></h2>
+  <div class="section">
+    <h3>🥇 推薦：Stanley Park</h3>
+    <a class="map-btn" href="https://maps.google.com/?q=Stanley+Park+Vancouver" target="_blank">📍 地圖</a>
+  </div>
+  <div class="section">
+    <h3>🍽️ 晚餐</h3>
+    <p>Robson Street 或海邊餐廳</p>
+    <a class="map-btn" href="https://maps.google.com/?q=Robson+Street+Vancouver" target="_blank">📍 Robson St</a>
+  </div>
+</div>
+
+<!-- Day 9 -->
+<div class="day" id="day9">
+  <h2>📅 Day 9 — 5/2　回台灣 <span class="today-badge">今天</span></h2>
+  <div class="section">
+    <h3>✈️ 02:00 飛機起飛</h3>
+    <p>23:00 從飯店出發 Uber 前往機場</p>
+    <a class="map-btn" href="https://maps.google.com/?q=Vancouver+International+Airport" target="_blank">📍 機場</a>
+  </div>
+</div>
+
+<!-- Pre-trip Tasks -->
+<div class="pretask-card" id="pretask">
+  <h2>✅ 行前準備清單</h2>
+  <p class="pretask-subtitle">依緊急程度排列，打勾後自動儲存進度</p>
+  <div class="pretask-progress">
+    <span class="progress-label" id="pretask-label">0 / 0 完成</span>
+    <div class="progress-bar"><div class="progress-fill" id="pretask-fill" style="width:0%"></div></div>
+  </div>
+  <br>
+
+  <!-- 🔴 立即辦 -->
+  <div class="pretask-group">
+    <h3>🔴 立即辦（越早越好）</h3>
+
+    <div class="pretask-item" style="border:2px solid #dc2626;border-radius:10px;background:var(--red-light);">
+      <input type="checkbox" data-pkey="shuttle">
+      <div class="task-info">
+        <div class="task-name">🚐 Moraine Lake Shuttle 預約 ⚠️ 先確認能否入山！</div>
+        <div class="task-note">🚨 重要：Moraine Lake Road 通常<strong>5月中旬才開放</strong>（積雪＋雪崩）。4/28 可能道路未開、接駁車未運行，請先至 Parks Canada 確認 2026 年開放日期再決定行程。若有開放，票會在開賣後幾分鐘內售完。</div>
+        <a class="map-btn task-link" href="https://reservation.pc.gc.ca/" target="_blank">🎟️ Parks Canada 預約系統</a>
+        <a class="map-btn task-link" href="https://www.pc.gc.ca/en/pn-np/ab/banff/visit/parkbus/moraine" target="_blank">📋 查詢開放日期</a>
+      </div>
+      <span class="urgent-badge">立即確認</span>
+    </div>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="eta">
+      <div class="task-info">
+        <div class="task-name">📋 eTA 電子旅行授權申請</div>
+        <div class="task-note">台灣護照搭飛機入境加拿大必須申請（陸路不需要）。費用 CAD $7，通常幾分鐘核准。有效 5 年或護照到期為止。⚠️ 只從官方網站申請，勿使用收費高的第三方代辦網站。</div>
+        <a class="map-btn task-link" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/apply.html" target="_blank">🌐 官方申請 eTA</a>
+      </div>
+      <span class="urgent-badge">立即</span>
+    </div>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="carrental">
+      <div class="task-info">
+        <div class="task-name">🚗 Calgary 租車預約</div>
+        <div class="task-note">4/26 抵達 Calgary 後自駕 Banff（約 1.5 小時）。山區建議租 AWD/SUV，4月底可能仍有積雪。需同時出示台灣駕照 + 國際駕照。確認合約允許開冰原大道（部分觀景台為碎石路）。</div>
+        <a class="map-btn task-link" href="https://www.kayak.com/cars/YYC-a1918" target="_blank">🔍 Kayak 比較</a>
+        <a class="map-btn task-link" href="https://www.rentalcars.com/en/airport/ca/yyc/" target="_blank">🔍 RentalCars</a>
+      </div>
+      <span class="urgent-badge">立即</span>
+    </div>
+  </div>
+
+  <!-- 🟠 出發前 4–6 週 -->
+  <div class="pretask-group">
+    <h3>🟠 出發前 4–6 週</h3>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="banff-gondola">
+      <div class="task-info">
+        <div class="task-name">🚡 Banff Gondola 訂票</div>
+        <div class="task-note">建議提前訂，旺季人多，線上票通常比現場便宜。4/27 傍晚看夕陽。</div>
+        <a class="map-btn task-link" href="https://www.banffjaspercollection.com/attractions/banff-gondola/" target="_blank">🎟️ 官網訂票</a>
+      </div>
+      <span class="soon-badge">提前</span>
+    </div>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="s2s-gondola">
+      <div class="task-info">
+        <div class="task-name">🚌 Sea to Sky Gondola 訂票</div>
+        <div class="task-note">4/30 使用，線上購票可避免現場排隊，週末人流大。</div>
+        <a class="map-btn task-link" href="https://www.seatoskygondola.com/" target="_blank">🎟️ 官網訂票</a>
+      </div>
+      <span class="soon-badge">提前</span>
+    </div>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="capilano">
+      <div class="task-info">
+        <div class="task-name">🌲 Capilano Suspension Bridge 訂票</div>
+        <div class="task-note">4/30 下午，旺季建議提前購票，線上有時有優惠。</div>
+        <a class="map-btn task-link" href="https://www.capbridge.com/" target="_blank">🎟️ 官網訂票</a>
+      </div>
+      <span class="soon-badge">提前</span>
+    </div>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="parks-pass">
+      <div class="task-info">
+        <div class="task-name">🏔️ Parks Canada Discovery Pass（強烈推薦）</div>
+        <div class="task-note">Banff + 冰原大道都需要公園入場費（約 CAD $10.5/天/車）。Discovery Pass 一台車最多 7 人共用，CAD $151.25，在 Banff 待 3 天以上就回本。同時涵蓋 Jasper 等所有 80+ 個國家公園。</div>
+        <a class="map-btn task-link" href="https://www.pc.gc.ca/apps/discovery-pass" target="_blank">🎟️ 購買 Discovery Pass</a>
+      </div>
+      <span class="soon-badge">提前</span>
+    </div>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="idp">
+      <div class="task-info">
+        <div class="task-name">🪪 國際駕照辦理</div>
+        <div class="task-note">加拿大租車需同時出示台灣駕照 + 國際駕照。至監理所辦理，費用 NT$250，當天可取。</div>
+      </div>
+      <span class="soon-badge">提前</span>
+    </div>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="insurance">
+      <div class="task-info">
+        <div class="task-name">🛡️ 旅遊保險購買</div>
+        <div class="task-note">加拿大醫療費用極高，強烈建議購買含醫療的旅遊保險。信用卡附贈保險需確認額度及範圍。</div>
+      </div>
+      <span class="soon-badge">提前</span>
+    </div>
+  </div>
+
+  <!-- 🟡 出發前 1–2 週 -->
+  <div class="pretask-group">
+    <h3>🟡 出發前 1–2 週</h3>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="sim">
+      <div class="task-info">
+        <div class="task-name">📱 加拿大 SIM / eSIM 購買</div>
+        <div class="task-note">推薦 eSIM 服務（如 Airalo、Ubigi），直接線上買省去機場換卡麻煩。主要電信：Rogers、Telus。</div>
+        <a class="map-btn task-link" href="https://www.airalo.com/canada-esim" target="_blank">🔗 Airalo eSIM</a>
+      </div>
+      <span class="ok-badge">一週前</span>
+    </div>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="currency">
+      <div class="task-info">
+        <div class="task-name">💵 換匯 / 通知銀行</div>
+        <div class="task-note">通知信用卡銀行出國日期，避免境外交易被鎖卡。建議換少量加幣現金備用（約 CAD 200–300）。</div>
+      </div>
+      <span class="ok-badge">一週前</span>
+    </div>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="offline-map">
+      <div class="task-info">
+        <div class="task-name">🗺️ 下載離線地圖</div>
+        <div class="task-note">Google Maps 下載 Vancouver、Banff、Calgary 離線地圖。山區訊號差，離線地圖必備。</div>
+      </div>
+      <span class="ok-badge">一週前</span>
+    </div>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="hotel-confirm">
+      <div class="task-info">
+        <div class="task-name">🏨 確認所有飯店訂單</div>
+        <div class="task-note">EXchange Hotel Vancouver（4/24–4/26）、Banff 住宿（4/26–4/28）、Best Western Plus Sands（4/29–5/2）</div>
+      </div>
+      <span class="ok-badge">一週前</span>
+    </div>
+  </div>
+
+  <!-- ✅ 出發當天 -->
+  <div class="pretask-group">
+    <h3>✅ 出發當天 / 登機前</h3>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="passport-check">
+      <div class="task-info">
+        <div class="task-name">🛂 護照效期確認（需 6 個月以上）</div>
+        <div class="task-note">出發日 4/24，護照需有效至 2026/10/24 以後。</div>
+      </div>
+      <span class="ok-badge">當天</span>
+    </div>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="docs-copy">
+      <div class="task-info">
+        <div class="task-name">📄 重要文件備份</div>
+        <div class="task-note">護照、保險單、訂房確認、租車確認，截圖存手機或列印備用。</div>
+      </div>
+      <span class="ok-badge">當天</span>
+    </div>
+
+    <div class="pretask-item">
+      <input type="checkbox" data-pkey="charge">
+      <div class="task-info">
+        <div class="task-name">🔋 所有設備充飽電</div>
+        <div class="task-note">手機、行動電源、相機、耳機。注意：行動電源不可托運，只能隨身攜帶。</div>
+      </div>
+      <span class="ok-badge">當天</span>
+    </div>
+  </div>
+
+  <div class="checklist-actions">
+    <button class="btn-sm" onclick="checkAllPre()">全選</button>
+    <button class="btn-sm" onclick="uncheckAllPre()">清除</button>
+  </div>
+</div>
+
+<!-- Packing Checklist -->
+<div class="checklist-card" id="checklist">
+  <h2>🧳 行李清單</h2>
+  <div class="checklist-progress">
+    <span class="progress-label" id="checklist-label">0 / 0 完成</span>
+    <div class="progress-bar"><div class="progress-fill" id="checklist-fill" style="width:0%"></div></div>
+  </div>
+  <br>
+  <div class="checklist-grid" id="checklist-items">
+    <!-- 證件 -->
+    <label class="checklist-item"><input type="checkbox" data-key="passport"><span>護照（效期確認）</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="eta"><span>eTA 電子旅行授權</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="creditcard"><span>信用卡（Visa/Master）</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="insurance"><span>旅遊保險</span></label>
+    <!-- 衣物 -->
+    <label class="checklist-item"><input type="checkbox" data-key="jacket"><span>防水外套（山區必備）</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="layer"><span>保暖內層衣</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="boots"><span>防水登山鞋</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="gloves"><span>手套（Banff 可能冷）</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="hat"><span>帽子</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="sunglasses"><span>太陽眼鏡</span></label>
+    <!-- 3C -->
+    <label class="checklist-item"><input type="checkbox" data-key="adapter"><span>轉接頭（Type A）</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="powerbank"><span>行動電源</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="sim"><span>SIM 卡 / eSIM</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="camera"><span>相機</span></label>
+    <!-- 日常 -->
+    <label class="checklist-item"><input type="checkbox" data-key="sunscreen"><span>防曬乳</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="medicine"><span>常備藥品</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="cash"><span>加幣現金（少量）</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="snack"><span>零食 / 能量棒</span></label>
+    <!-- 預訂確認 -->
+    <label class="checklist-item"><input type="checkbox" data-key="hotel1"><span>EXchange Hotel 確認</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="hotel2"><span>Best Western Sands 確認</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="shuttle"><span>Moraine Lake Shuttle 預約</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="gondola"><span>Banff Gondola 訂票</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="s2s"><span>Sea to Sky Gondola 訂票</span></label>
+    <label class="checklist-item"><input type="checkbox" data-key="capilano"><span>Capilano Bridge 訂票</span></label>
+  </div>
+  <div class="checklist-actions">
+    <button class="btn-sm" onclick="checkAll()">全選</button>
+    <button class="btn-sm" onclick="uncheckAll()">清除</button>
+  </div>
+</div>
+
+<!-- Summary -->
+<div class="summary">
+  <h2>⭐ 最終總結</h2>
+  <div class="summary-grid">
+    <div class="summary-box">
+      <h3>🚗 交通</h3>
+      <ul>
+        <li>機場 → Uber</li>
+        <li>市區 → 步行＋Uber</li>
+        <li>Banff → 自駕</li>
+        <li>Moraine → 接駁車</li>
+        <li>Sea to Sky → 接駁</li>
+      </ul>
+    </div>
+    <div class="summary-box">
+      <h3>📸 精華順序</h3>
+      <ul>
+        <li>Moraine Lake 🔥</li>
+        <li>Sea to Sky</li>
+        <li>English Bay</li>
+        <li>Gastown</li>
+      </ul>
+    </div>
+    <div class="summary-box">
+      <h3>🍽️ 必吃</h3>
+      <ul>
+        <li>Cactus Club</li>
+        <li>Cafe Medina</li>
+        <li>Granville Market</li>
+        <li>Park Distillery</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="install-banner" style="display:none;position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:#1f2937;color:white;padding:12px 20px;border-radius:14px;font-size:0.85em;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.3);z-index:200;max-width:320px;width:90%;">
+  📲 加到手機主畫面，隨時離線查看
+  <div style="margin-top:8px;display:flex;gap:8px;justify-content:center;">
+    <button onclick="installApp()" style="background:#dc2626;color:white;border:none;border-radius:8px;padding:6px 16px;cursor:pointer;font-size:0.9em;">安裝</button>
+    <button onclick="document.getElementById('install-banner').style.display='none'" style="background:rgba(255,255,255,0.15);color:white;border:none;border-radius:8px;padding:6px 16px;cursor:pointer;font-size:0.9em;">略過</button>
+  </div>
+</div>
+
+<footer>
+  <br>🍁 加拿大行程 2026/4/24–5/2 · 祝旅途愉快！<br>
+  <span style="font-size:0.75em">手機用戶：瀏覽器選單 → 「加入主畫面」可離線使用</span><br><br>
+</footer>
+
+</div>
+
+<script>
+// ── Dark Mode ──
+function toggleDark() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  document.querySelector('.dark-toggle').textContent = isDark ? '🌙 深色' : '☀️ 明亮';
+  localStorage.setItem('theme', isDark ? 'light' : 'dark');
+}
+(function() {
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  if (saved === 'dark') document.querySelector('.dark-toggle').textContent = '☀️ 明亮';
+})();
+
+// ── Live Clocks (Vancouver PDT=UTC-7, Banff MDT=UTC-6) ──
+function updateClocks() {
+  const now = new Date();
+  const vanOptions = { timeZone: 'America/Vancouver', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+  const vanDateOptions = { timeZone: 'America/Vancouver', month: 'numeric', day: 'numeric', weekday: 'short' };
+  const banffOptions = { timeZone: 'America/Edmonton', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+  const banffDateOptions = { timeZone: 'America/Edmonton', month: 'numeric', day: 'numeric', weekday: 'short' };
+  document.getElementById('van-time').textContent = now.toLocaleTimeString('zh-TW', vanOptions);
+  document.getElementById('van-date').textContent = now.toLocaleDateString('zh-TW', vanDateOptions);
+  document.getElementById('banff-time').textContent = now.toLocaleTimeString('zh-TW', banffOptions);
+  document.getElementById('banff-date').textContent = now.toLocaleDateString('zh-TW', banffDateOptions);
+}
+updateClocks();
+setInterval(updateClocks, 1000);
+
+// ── Countdown ──
+function updateCountdown() {
+  const tripStart = new Date('2026-04-24T19:20:00+08:00');
+  const tripEnd = new Date('2026-05-02T02:00:00+08:00');
+  const now = new Date();
+  const numEl = document.getElementById('countdown-num');
+  const labelEl = document.getElementById('countdown-label');
+  if (now < tripStart) {
+    const days = Math.ceil((tripStart - now) / 86400000);
+    numEl.textContent = days;
+    labelEl.textContent = '天後出發';
+  } else if (now < tripEnd) {
+    const days = Math.ceil((tripEnd - now) / 86400000);
+    numEl.textContent = days;
+    labelEl.textContent = '天後回台灣　旅途中！';
+  } else {
+    numEl.textContent = '✅';
+    labelEl.textContent = '旅程已結束，回憶美好！';
+  }
+}
+updateCountdown();
+
+// ── Today Highlight ──
+const dayMap = [
+  { id: 'day1', ovId: 'ov-d1', start: '2026-04-24', end: '2026-04-25' },
+  { id: 'day2', ovId: 'ov-d2', start: '2026-04-25', end: '2026-04-26' },
+  { id: 'day3', ovId: 'ov-d3', start: '2026-04-26', end: '2026-04-27' },
+  { id: 'day4', ovId: 'ov-d4', start: '2026-04-27', end: '2026-04-28' },
+  { id: 'day5', ovId: 'ov-d5', start: '2026-04-28', end: '2026-04-29' },
+  { id: 'day6', ovId: 'ov-d6', start: '2026-04-29', end: '2026-04-30' },
+  { id: 'day7', ovId: 'ov-d7', start: '2026-04-30', end: '2026-05-01' },
+  { id: 'day8', ovId: 'ov-d8', start: '2026-05-01', end: '2026-05-02' },
+  { id: 'day9', ovId: 'ov-d9', start: '2026-05-02', end: '2026-05-03' },
+];
+(function highlightToday() {
+  const now = new Date();
+  const todayStr = now.toISOString().slice(0, 10);
+  dayMap.forEach(d => {
+    if (todayStr >= d.start && todayStr < d.end) {
+      document.getElementById(d.id).classList.add('today');
+      document.getElementById(d.ovId).classList.add('today-row');
+      // Update nav active
+      document.querySelectorAll('.daynav a').forEach(a => {
+        if (a.getAttribute('href') === '#' + d.id) a.classList.add('active');
+      });
+    }
+  });
+})();
+
+// ── Currency Converter ──
+const CAD_TO_TWD = 22.2;
+function convert() {
+  const amount = parseFloat(document.getElementById('amount').value) || 0;
+  const dir = document.getElementById('direction').value;
+  let result;
+  if (dir === 'cad2twd') {
+    result = (amount * CAD_TO_TWD).toLocaleString('zh-TW', { maximumFractionDigits: 0 });
+    document.getElementById('converted').textContent = '≈ ' + result + ' TWD';
+  } else {
+    result = (amount / CAD_TO_TWD).toLocaleString('zh-TW', { maximumFractionDigits: 2 });
+    document.getElementById('converted').textContent = '≈ ' + result + ' CAD';
+  }
+}
+convert();
+
+// ── Checklist (localStorage) ──
+function loadChecklist() {
+  const items = document.querySelectorAll('#checklist-items input[type=checkbox]');
+  items.forEach(cb => {
+    const saved = localStorage.getItem('check_' + cb.dataset.key);
+    if (saved === '1') {
+      cb.checked = true;
+      cb.closest('label').classList.add('done');
+    }
+    cb.addEventListener('change', () => {
+      localStorage.setItem('check_' + cb.dataset.key, cb.checked ? '1' : '0');
+      cb.closest('label').classList.toggle('done', cb.checked);
+      updateProgress();
+    });
+  });
+  updateProgress();
+}
+function updateProgress() {
+  const items = document.querySelectorAll('#checklist-items input[type=checkbox]');
+  const done = [...items].filter(cb => cb.checked).length;
+  const total = items.length;
+  document.getElementById('checklist-label').textContent = done + ' / ' + total + ' 完成';
+  document.getElementById('checklist-fill').style.width = (done / total * 100) + '%';
+}
+function checkAll() {
+  document.querySelectorAll('#checklist-items input[type=checkbox]').forEach(cb => {
+    cb.checked = true;
+    localStorage.setItem('check_' + cb.dataset.key, '1');
+    cb.closest('label').classList.add('done');
+  });
+  updateProgress();
+}
+function uncheckAll() {
+  document.querySelectorAll('#checklist-items input[type=checkbox]').forEach(cb => {
+    cb.checked = false;
+    localStorage.setItem('check_' + cb.dataset.key, '0');
+    cb.closest('label').classList.remove('done');
+  });
+  updateProgress();
+}
+loadChecklist();
+
+// ── Pre-trip Checklist (localStorage) ──
+function loadPretask() {
+  const items = document.querySelectorAll('.pretask-item input[type=checkbox]');
+  items.forEach(cb => {
+    const saved = localStorage.getItem('pre_' + cb.dataset.pkey);
+    if (saved === '1') {
+      cb.checked = true;
+      cb.closest('.pretask-item').classList.add('done');
+    }
+    cb.addEventListener('change', () => {
+      localStorage.setItem('pre_' + cb.dataset.pkey, cb.checked ? '1' : '0');
+      cb.closest('.pretask-item').classList.toggle('done', cb.checked);
+      updatePretaskProgress();
+    });
+  });
+  updatePretaskProgress();
+}
+function updatePretaskProgress() {
+  const items = document.querySelectorAll('.pretask-item input[type=checkbox]');
+  const done = [...items].filter(cb => cb.checked).length;
+  const total = items.length;
+  document.getElementById('pretask-label').textContent = done + ' / ' + total + ' 完成';
+  document.getElementById('pretask-fill').style.width = (done / total * 100) + '%';
+}
+function checkAllPre() {
+  document.querySelectorAll('.pretask-item input[type=checkbox]').forEach(cb => {
+    cb.checked = true;
+    localStorage.setItem('pre_' + cb.dataset.pkey, '1');
+    cb.closest('.pretask-item').classList.add('done');
+  });
+  updatePretaskProgress();
+}
+function uncheckAllPre() {
+  document.querySelectorAll('.pretask-item input[type=checkbox]').forEach(cb => {
+    cb.checked = false;
+    localStorage.setItem('pre_' + cb.dataset.pkey, '0');
+    cb.closest('.pretask-item').classList.remove('done');
+  });
+  updatePretaskProgress();
+}
+loadPretask();
+
+// ── PWA Install Prompt ──
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  setTimeout(() => {
+    document.getElementById('install-banner').style.display = 'block';
+  }, 3000);
+});
+function installApp() {
+  document.getElementById('install-banner').style.display = 'none';
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(() => { deferredPrompt = null; });
+  }
+}
+window.addEventListener('appinstalled', () => {
+  document.getElementById('install-banner').style.display = 'none';
+});
+</script>
+</body>
+</html>
