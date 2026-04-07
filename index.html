@@ -524,9 +524,25 @@ footer { text-align: center; color: var(--muted); font-size: 0.8em; margin-top: 
 <div class="day" id="day1">
   <h2>📅 Day 1 — 4/24　抵達 Vancouver <span class="today-badge">今天</span></h2>
   <div class="section">
-    <h3>✈️ 抵達</h3>
-    <p>19:20 抵達 Vancouver International Airport</p>
-    <a class="map-btn" href="https://maps.google.com/?q=Vancouver+International+Airport" target="_blank">📍 地圖</a>
+    <h3>✈️ 去程航班</h3>
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:6px 0">
+      <span style="font-size:1.5em;font-weight:800;color:var(--red)">CI 032</span>
+      <div style="flex:1;min-width:160px">
+        <div style="display:flex;align-items:center;gap:8px;font-size:1em;">
+          <span><strong>TPE</strong> <span style="color:var(--muted);font-size:0.85em">桃園</span></span>
+          <span style="flex:1;text-align:center;border-top:2px solid var(--border);margin:0 4px;position:relative;">
+            <span style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);font-size:0.75em;color:var(--muted);white-space:nowrap">~10h 45m ✈️</span>
+          </span>
+          <span><strong>YVR</strong> <span style="color:var(--muted);font-size:0.85em">溫哥華</span></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:0.9em;margin-top:6px;">
+          <span>🕙 <strong>23:35</strong> <span style="color:var(--muted);font-size:0.8em">4/24</span></span>
+          <span>🕖 <strong>19:20</strong> <span style="color:var(--muted);font-size:0.8em">4/24 (YVR)</span></span>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:0.78em;color:var(--muted);margin-top:4px">中華航空 · 桃園出發 23:35，降落溫哥華 19:20（同日，時差 −15h）</p>
+    <a class="map-btn" href="https://maps.google.com/?q=Vancouver+International+Airport" target="_blank">📍 YVR 地圖</a>
   </div>
   <div class="section">
     <h3>🚗 機場 → 飯店</h3>
@@ -690,9 +706,29 @@ footer { text-align: center; color: var(--muted); font-size: 0.8em; margin-top: 
 <div class="day" id="day9">
   <h2>📅 Day 9 — 5/2　回台灣 <span class="today-badge">今天</span></h2>
   <div class="section">
-    <h3>✈️ 02:00 飛機起飛</h3>
-    <p>23:00 從飯店出發 Uber 前往機場</p>
-    <a class="map-btn" href="https://maps.google.com/?q=Vancouver+International+Airport" target="_blank">📍 機場</a>
+    <h3>🚗 出發去機場</h3>
+    <p>23:00 從飯店叫 Uber 前往 YVR（預留 1 小時，建議提前）</p>
+    <a class="map-btn" href="https://maps.google.com/?q=Vancouver+International+Airport" target="_blank">📍 YVR 地圖</a>
+  </div>
+  <div class="section">
+    <h3>✈️ 回程航班</h3>
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:6px 0">
+      <span style="font-size:1.5em;font-weight:800;color:var(--red)">CI 031</span>
+      <div style="flex:1;min-width:160px">
+        <div style="display:flex;align-items:center;gap:8px;font-size:1em;">
+          <span><strong>YVR</strong> <span style="color:var(--muted);font-size:0.85em">溫哥華</span></span>
+          <span style="flex:1;text-align:center;border-top:2px solid var(--border);margin:0 4px;position:relative;">
+            <span style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);font-size:0.75em;color:var(--muted);white-space:nowrap">~12h 30m ✈️</span>
+          </span>
+          <span><strong>TPE</strong> <span style="color:var(--muted);font-size:0.85em">桃園</span></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:0.9em;margin-top:6px;">
+          <span>🕑 <strong>02:00</strong> <span style="color:var(--muted);font-size:0.8em">5/2 (YVR)</span></span>
+          <span>🌅 <strong>06:30</strong> <span style="color:var(--muted);font-size:0.8em">5/3 (TPE)</span></span>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:0.78em;color:var(--muted);margin-top:4px">中華航空 · 溫哥華深夜出發，抵達桃園約隔日清晨（時差 +15h）</p>
   </div>
 </div>
 
