@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>加拿大行程 2026/4/24–5/2</title>
 <meta name="description" content="Vancouver × Banff 9天行程，含地圖、時鐘、匯率、行前清單">
-<meta name="theme-color" content="#dc2626">
+<meta name="theme-color" content="#9c6b3c">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="加拿大行程">
@@ -14,32 +14,32 @@
 <link rel="manifest" href="manifest.json">
 <style>
 :root {
-  --bg: #f0f4f8;
-  --card: #ffffff;
-  --text: #1f2937;
-  --sub: #4b5563;
-  --muted: #9ca3af;
-  --red: #dc2626;
-  --red-light: #fef2f2;
-  --section-bg: #f8fafc;
-  --border: #e5e7eb;
-  --shadow: 0 4px 20px rgba(0,0,0,0.07);
-  --today: #fef9c3;
-  --today-border: #eab308;
+  --bg: #f5ede0;
+  --card: #fdfaf5;
+  --text: #2c1f14;
+  --sub: #6b4e37;
+  --muted: #a8917b;
+  --red: #9c6b3c;
+  --red-light: #f9efe1;
+  --section-bg: #f0e6d4;
+  --border: #e2d4bf;
+  --shadow: 0 4px 20px rgba(100,60,20,0.10);
+  --today: #fef3dc;
+  --today-border: #c49a2a;
 }
 [data-theme="dark"] {
-  --bg: #111827;
-  --card: #1f2937;
-  --text: #f9fafb;
-  --sub: #d1d5db;
-  --muted: #6b7280;
-  --red: #f87171;
-  --red-light: #3b1515;
-  --section-bg: #111827;
-  --border: #374151;
-  --shadow: 0 4px 20px rgba(0,0,0,0.4);
-  --today: #3b3000;
-  --today-border: #ca8a04;
+  --bg: #1c1410;
+  --card: #261e18;
+  --text: #f4ede2;
+  --sub: #c4aa90;
+  --muted: #7a6251;
+  --red: #d4914a;
+  --red-light: #3b2010;
+  --section-bg: #1c1410;
+  --border: #3d2e22;
+  --shadow: 0 4px 20px rgba(0,0,0,0.5);
+  --today: #2c2000;
+  --today-border: #b8860b;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -131,12 +131,12 @@ html { scroll-behavior: smooth; }
 /* ── Header ── */
 header {
   text-align: center;
-  background: linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #b91c1c 100%);
+  background: linear-gradient(135deg, #7a4f28 0%, #b5782a 40%, #c9924e 100%);
   color: white;
   padding: 32px 20px 24px;
   border-radius: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 10px 30px rgba(220,38,38,0.25);
+  box-shadow: 0 10px 30px rgba(122,79,40,0.30);
   position: relative;
   overflow: hidden;
 }
@@ -221,7 +221,7 @@ header p { opacity: 0.9; font-size: 1em; }
 .overview h2 { margin-bottom: 14px; color: var(--red); }
 table { width: 100%; border-collapse: collapse; }
 th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
-th { background: var(--red-light); color: var(--red); font-size: 0.9em; }
+th { background: var(--section-bg); color: var(--red); font-size: 0.9em; font-weight: 700; letter-spacing: 0.03em; }
 tr:hover td { background: var(--section-bg); }
 tr.today-row td { background: var(--today); font-weight: 600; }
 .overview-link { text-decoration: none; color: var(--sub); }
@@ -285,14 +285,14 @@ li { margin: 3px 0; }
 .map-btn + .map-btn { margin-left: 6px; }
 .time-badge {
   display: inline-block;
-  background: #dbeafe;
-  color: #1d4ed8;
+  background: #e8d9c0;
+  color: #7a4f28;
   padding: 2px 8px;
   border-radius: 6px;
   font-size: 0.8em;
   margin-left: 6px;
 }
-[data-theme="dark"] .time-badge { background: #1e3a5f; color: #93c5fd; }
+[data-theme="dark"] .time-badge { background: #3d2e1a; color: #d4a96a; }
 
 /* ── Pre-trip Tasks ── */
 .pretask-card {
@@ -418,12 +418,12 @@ li { margin: 3px 0; }
 
 /* ── Summary ── */
 .summary {
-  background: linear-gradient(135deg, #fef9c3, #fee2e2);
+  background: linear-gradient(135deg, #f5e6ce, #eedfc6);
   border-radius: 16px;
   padding: 24px;
   margin-top: 10px;
 }
-[data-theme="dark"] .summary { background: linear-gradient(135deg, #3b2f00, #3b1515); }
+[data-theme="dark"] .summary { background: linear-gradient(135deg, #2e2010, #261a0e); }
 .summary h2 { color: var(--red); margin-bottom: 14px; font-size: 1.2em; }
 .summary-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
 @media(max-width:600px){ .summary-grid { grid-template-columns: 1fr; } }
