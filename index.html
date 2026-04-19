@@ -452,7 +452,61 @@ footer { text-align: center; color: var(--muted); font-size: 0.8em; margin-top: 
     <a href="#checklist">行李</a>
   </nav>
   <span class="topbar-spacer"></span>
+  <button class="dark-toggle" onclick="toggleLang()" style="margin-right:6px">🌐 EN</button>
   <button class="dark-toggle" onclick="toggleDark()">🌙 深色</button>
+</div>
+
+<!-- English Summary (for customs/immigration) -->
+<div id="en-summary" style="display:none;background:#fdfaf5;border-radius:20px;padding:24px;margin:20px auto;max-width:900px;box-shadow:var(--shadow);">
+  <div style="border-bottom:2px solid #9c6b3c;padding-bottom:14px;margin-bottom:16px;">
+    <h1 style="color:#9c6b3c;margin:0 0 6px 0;font-size:1.6em;">🍁 Canada Trip Itinerary</h1>
+    <p style="color:#6b4e37;font-size:0.95em;margin:0">April 24 – May 2, 2026 · Vancouver × Banff × Lake Louise × Calgary</p>
+  </div>
+
+  <h2 style="color:#9c6b3c;font-size:1.1em;margin:18px 0 8px">✈️ Flights</h2>
+  <table style="width:100%;font-size:0.9em;border-collapse:collapse;margin-bottom:14px">
+    <tr style="background:#f0e6d4"><th style="padding:8px;text-align:left;">Route</th><th style="padding:8px;text-align:left;">Flight</th><th style="padding:8px;text-align:left;">Date / Time</th></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">TPE (Taipei) → YVR (Vancouver)</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">China Airlines CI032</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Apr 24, depart 23:35 TPE · arrive 19:20 YVR</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">YVR → YYC (Calgary)</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Domestic flight</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Apr 26, depart 10:40</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">YYC → YVR</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Domestic flight</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Apr 29, arrive YVR 17:35</td></tr>
+    <tr><td style="padding:8px;">YVR → TPE (Taipei)</td><td style="padding:8px;">China Airlines CI031</td><td style="padding:8px;">May 2, depart 02:00 YVR · arrive 06:30 TPE (May 3)</td></tr>
+  </table>
+
+  <h2 style="color:#9c6b3c;font-size:1.1em;margin:18px 0 8px">🏨 Accommodation</h2>
+  <table style="width:100%;font-size:0.9em;border-collapse:collapse;margin-bottom:14px">
+    <tr style="background:#f0e6d4"><th style="padding:8px;text-align:left;">Dates</th><th style="padding:8px;text-align:left;">Hotel</th><th style="padding:8px;text-align:left;">Address</th></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">Apr 24–26 (2 nights)</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">EXchange Hotel Vancouver</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">475 Howe St, Vancouver, BC</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">Apr 26–27 (1 night)</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">The Westley Calgary Downtown, Tapestry Collection by Hilton</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Calgary, AB</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">Apr 27–28 (1 night)</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Hotel Canoe and Suites</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Banff, AB</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">Apr 28–29 (1 night)</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Mountaineer Lodge</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Lake Louise, AB</td></tr>
+    <tr><td style="padding:8px;">Apr 29 – May 1 (2 nights)</td><td style="padding:8px;">Best Western Plus Sands</td><td style="padding:8px;">1755 Davie Street, Vancouver, BC V6G 1W5</td></tr>
+  </table>
+
+  <h2 style="color:#9c6b3c;font-size:1.1em;margin:18px 0 8px">📅 Daily Itinerary</h2>
+  <table style="width:100%;font-size:0.9em;border-collapse:collapse;margin-bottom:14px">
+    <tr style="background:#f0e6d4"><th style="padding:8px;text-align:left;">Date</th><th style="padding:8px;text-align:left;">Location</th><th style="padding:8px;text-align:left;">Activities</th></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">Apr 24 (Fri)</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Vancouver</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Arrive YVR 19:20, check in EXchange Hotel, dinner</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">Apr 25 (Sat)</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Vancouver</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Cafe Medina brunch, Gastown, Robson Street, Granville Island</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">Apr 26 (Sun)</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">→ Calgary</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Fly YVR→YYC, rental car pickup, Southcentre Mall shopping, Chinook Centre, Crescent Heights Lookout</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">Apr 27 (Mon)</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Banff</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Drive Calgary→Banff, Vermilion Lakes, Banff Avenue, Banff Gondola sunset</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">Apr 28 (Tue)</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Banff → Lake Louise</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Johnston Canyon, Lake Louise, Icefields Parkway (Bow Lake, Peyto Lake)</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">Apr 29 (Wed)</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Lake Louise → Vancouver</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Drive to Calgary, return rental car 14:30, fly YYC→YVR, English Bay sunset</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">Apr 30 (Thu)</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Vancouver</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Sea to Sky Gondola day tour (Shannon Falls, Whistler Village)</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #e2d4bf">May 1 (Fri)</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Vancouver</td><td style="padding:8px;border-bottom:1px solid #e2d4bf">Cora Breakfast, Stanley Park, Vancouver Aquarium, Robson Street shopping</td></tr>
+    <tr><td style="padding:8px;">May 2 (Sat)</td><td style="padding:8px;">→ Taipei</td><td style="padding:8px;">Depart YVR 02:00 (CI031)</td></tr>
+  </table>
+
+  <h2 style="color:#9c6b3c;font-size:1.1em;margin:18px 0 8px">🚗 Transportation</h2>
+  <ul style="font-size:0.9em;color:#2c1f14">
+    <li><strong>Apr 26–29:</strong> Rental car from Calgary Airport (Alamo) — for Banff/Lake Louise drive</li>
+    <li><strong>In cities:</strong> Uber / walking</li>
+    <li><strong>Apr 30:</strong> Guided bus tour (Sea to Sky + Whistler)</li>
+  </ul>
+
+  <h2 style="color:#9c6b3c;font-size:1.1em;margin:18px 0 8px">👤 Purpose of Visit</h2>
+  <p style="font-size:0.9em;color:#2c1f14;margin-bottom:12px">Tourism — sightseeing in Vancouver, Banff National Park, and the Canadian Rockies. Total stay: 9 days.</p>
+
+  <p style="font-size:0.82em;color:#6b4e37;font-style:italic;margin-top:20px">For the full Chinese itinerary with maps and details, tap the 🌐 EN button again to switch back.</p>
 </div>
 
 <div class="container">
@@ -1376,6 +1430,26 @@ footer { text-align: center; color: var(--muted); font-size: 0.8em; margin-top: 
 
 <script>
 // ── Dark Mode ──
+// ── Language Toggle ──
+function toggleLang() {
+  const enSummary = document.getElementById('en-summary');
+  const btn = document.querySelector('button[onclick="toggleLang()"]');
+  const allDays = document.querySelectorAll('.day, .overview, .currency-card, .infostrip, .pretask-card, .checklist-card, .summary, header');
+  const isEn = enSummary.style.display === 'block';
+  if (isEn) {
+    // Switch to Chinese
+    enSummary.style.display = 'none';
+    allDays.forEach(el => el.style.display = '');
+    btn.textContent = '🌐 EN';
+  } else {
+    // Switch to English
+    enSummary.style.display = 'block';
+    allDays.forEach(el => el.style.display = 'none');
+    btn.textContent = '🌐 中';
+    window.scrollTo(0, 0);
+  }
+}
+
 function toggleDark() {
   const html = document.documentElement;
   const isDark = html.getAttribute('data-theme') === 'dark';
