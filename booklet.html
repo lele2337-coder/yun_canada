@@ -1,0 +1,1922 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>加拿大旅行手冊 · 2026</title>
+<style>
+@page { size: A5; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --paper: #ebdfc0;
+  --paper-dark: #d8c89f;
+  --ink: #2b2a26;
+  --ink-soft: #5a564d;
+  --muted: #8a7f67;
+  --accent: #c8483a;
+  --accent-soft: #d76e5f;
+  --leaf: #c43d2a;
+  --sea: #6a8ba5;
+  --pine: #5a7a4f;
+  --pine-dark: #3e5a36;
+  --mountain: #7a6d52;
+  --line: #b8a77d;
+}
+
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Helvetica Neue", "PingFang TC", "Noto Sans TC", "微軟正黑體", sans-serif;
+  line-height: 1.55;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  font-size: 8.5pt;
+  font-weight: 500;
+}
+
+.page {
+  width: 148mm;
+  height: 210mm;
+  position: relative;
+  page-break-after: always;
+  page-break-inside: avoid;
+  overflow: hidden;
+  background-color: var(--paper);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><g fill='%239c8560' fill-opacity='0.5'><ellipse cx='15' cy='12' rx='1.2' ry='0.5'/><ellipse cx='47' cy='8' rx='0.8' ry='1.5'/><ellipse cx='78' cy='15' rx='1.5' ry='0.6'/><circle cx='110' cy='20' r='0.9'/><ellipse cx='145' cy='7' rx='1.8' ry='0.7'/><circle cx='170' cy='18' r='1'/><ellipse cx='25' cy='35' rx='1.4' ry='0.5'/><ellipse cx='58' cy='42' rx='0.6' ry='1.3'/><circle cx='90' cy='38' r='0.7'/><ellipse cx='125' cy='45' rx='1.6' ry='0.6'/><ellipse cx='158' cy='40' rx='0.9' ry='1.7'/><ellipse cx='185' cy='32' rx='1.2' ry='0.5'/><circle cx='8' cy='55' r='0.8'/><ellipse cx='40' cy='65' rx='2' ry='0.8'/><ellipse cx='72' cy='58' rx='0.7' ry='1.4'/><circle cx='100' cy='62' r='1.1'/><ellipse cx='135' cy='55' rx='1.3' ry='0.5'/><ellipse cx='168' cy='70' rx='0.9' ry='1.5'/><circle cx='20' cy='85' r='1'/><ellipse cx='52' cy='92' rx='1.5' ry='0.7'/><ellipse cx='82' cy='78' rx='0.8' ry='1.6'/><circle cx='115' cy='88' r='0.9'/><ellipse cx='148' cy='85' rx='1.8' ry='0.6'/><ellipse cx='178' cy='95' rx='0.7' ry='1.2'/><ellipse cx='10' cy='108' rx='1.4' ry='0.5'/><circle cx='38' cy='115' r='0.8'/><ellipse cx='68' cy='105' rx='1.7' ry='0.7'/><ellipse cx='98' cy='118' rx='0.6' ry='1.4'/><circle cx='128' cy='112' r='1.2'/><ellipse cx='160' cy='108' rx='1.5' ry='0.6'/><ellipse cx='188' cy='118' rx='0.8' ry='1.3'/><ellipse cx='22' cy='135' rx='1.6' ry='0.7'/><circle cx='55' cy='140' r='0.9'/><ellipse cx='85' cy='128' rx='0.7' ry='1.5'/><ellipse cx='118' cy='138' rx='1.4' ry='0.5'/><circle cx='148' cy='132' r='1'/><ellipse cx='175' cy='142' rx='1.1' ry='0.6'/><circle cx='12' cy='160' r='1.3'/><ellipse cx='42' cy='155' rx='0.8' ry='1.6'/><ellipse cx='75' cy='168' rx='1.5' ry='0.6'/><circle cx='108' cy='162' r='0.7'/><ellipse cx='140' cy='158' rx='1.8' ry='0.7'/><ellipse cx='168' cy='170' rx='0.9' ry='1.4'/><ellipse cx='25' cy='182' rx='1.3' ry='0.5'/><circle cx='60' cy='188' r='1.1'/><ellipse cx='92' cy='180' rx='0.7' ry='1.5'/><ellipse cx='122' cy='185' rx='1.6' ry='0.7'/><circle cx='155' cy='180' r='0.9'/><ellipse cx='188' cy='188' rx='1.2' ry='0.6'/></g></svg>");
+  background-size: 100mm 100mm;
+}
+.page:last-child { page-break-after: auto; }
+
+/* ======= 共用 ======= */
+.section-title {
+  text-align: center;
+  font-size: 13pt;
+  font-weight: 700;
+  letter-spacing: 0.7em;
+  color: var(--ink);
+  padding-left: 0.7em;
+  padding-top: 10mm;
+  margin-bottom: 6mm;
+}
+.sh {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 9.5pt;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 2.5mm;
+  margin-bottom: 2mm;
+}
+.sh::before {
+  content: "";
+  display: inline-block;
+  width: 3.5mm;
+  height: 3.5mm;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23c8483a'><path d='M1 2h4v12H1zm5 0h4v12H6zm5 0h4v12h-4z' stroke='%23c8483a' stroke-width='0.5'/></svg>") no-repeat center;
+  background-size: contain;
+  flex-shrink: 0;
+}
+
+/* ======= 封面 ======= */
+.cover-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15mm;
+  text-align: center;
+}
+.cover-illust { width: 110mm; max-height: 100mm; margin-bottom: 8mm; }
+.cover-title {
+  font-size: 40pt; font-weight: 800;
+  letter-spacing: 0.25em; padding-left: 0.25em;
+  color: var(--ink); margin-bottom: 3mm;
+  line-height: 1;
+}
+.cover-sub {
+  font-size: 10pt; color: var(--ink-soft);
+  letter-spacing: 0.1em; margin-bottom: 3mm;
+}
+.cover-dates {
+  font-size: 9pt; color: var(--muted);
+  letter-spacing: 0.2em;
+}
+
+/* ======= 日頁共用 ======= */
+.day-page { display: flex; flex-direction: column; height: 100%; }
+
+/* 左頁英雄區 */
+.day-hero {
+  height: 52mm;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fdfaf5;
+  text-align: center;
+}
+.day-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='100'><g fill='none' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.3'><path d='M0 70 L30 45 L50 55 L80 30 L110 50 L145 25 L175 40 L200 32 L200 100 L0 100z' fill='%23ffffff' fill-opacity='0.12'/><path d='M0 85 L25 70 L55 78 L85 55 L120 68 L155 50 L190 62 L200 58 L200 100 L0 100z' fill='%23ffffff' fill-opacity='0.08'/></g></svg>") center/cover no-repeat;
+}
+.day-hero-text { position: relative; z-index: 1; }
+.day-hero-num {
+  font-size: 7pt;
+  letter-spacing: 0.45em;
+  opacity: 0.85;
+  margin-bottom: 1.5mm;
+}
+.day-hero-title {
+  font-size: 15pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 1mm;
+}
+.day-hero-sub {
+  font-size: 7.5pt;
+  letter-spacing: 0.25em;
+  opacity: 0.85;
+}
+
+/* 左頁標題列 */
+.day-info {
+  padding: 3.5mm 10mm 3mm;
+  border-bottom: 0.5pt solid var(--line);
+}
+.day-heading {
+  font-size: 13pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+}
+.day-heading .en { color: var(--accent); font-weight: 600; }
+.day-date-line {
+  font-size: 7.5pt;
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  margin-top: 0.8mm;
+}
+.day-route {
+  font-size: 7pt;
+  color: var(--ink-soft);
+  margin-top: 1mm;
+  font-style: italic;
+}
+
+/* 右頁 小型 header */
+.day-right-head {
+  padding: 6mm 10mm 2mm;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5pt solid var(--line);
+}
+.day-right-head .lbl {
+  font-size: 7pt;
+  color: var(--muted);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+.day-right-head .num {
+  font-size: 10.5pt;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+/* 時間軸 */
+.day-timeline {
+  flex: 1;
+  padding: 3mm 10mm 4mm;
+  position: relative;
+  overflow: hidden;
+}
+.tl-row {
+  display: grid;
+  grid-template-columns: 13mm 1fr;
+  gap: 3mm;
+  padding: 1.3mm 0;
+  align-items: baseline;
+}
+.tl-time {
+  font-size: 8pt;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-align: right;
+}
+.tl-content {
+  font-size: 8pt;
+  color: var(--ink);
+  line-height: 1.4;
+}
+.tl-content .main {
+  font-weight: 700;
+  font-size: 8.5pt;
+  color: var(--ink);
+}
+.tl-content .sub {
+  font-size: 7pt;
+  color: var(--muted);
+  font-weight: 500;
+  margin-top: 0.2mm;
+  line-height: 1.35;
+}
+.tl-content .hl { color: var(--accent); font-weight: 700; }
+.tl-content ul {
+  margin: 0.5mm 0 0.5mm 0;
+  list-style: none;
+  font-size: 7pt;
+  color: var(--ink-soft);
+}
+.tl-content ul li {
+  padding: 0.3mm 0 0.3mm 3mm;
+  position: relative;
+  line-height: 1.35;
+}
+.tl-content ul li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.tl-content .warn {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 7.5pt;
+  margin-top: 0.5mm;
+}
+
+/* 美食／購物清單盒 */
+.list-box {
+  background: rgba(200, 72, 58, 0.07);
+  border-left: 2pt solid var(--accent);
+  padding: 2.5mm 3mm;
+  margin: 2mm 0;
+  border-radius: 0 1mm 1mm 0;
+}
+.list-box .list-title {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 7.5pt;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.2mm;
+}
+.list-box .li {
+  font-size: 7pt;
+  line-height: 1.4;
+  margin-bottom: 0.5mm;
+  color: var(--ink);
+}
+.list-box .li .nm { font-weight: 700; }
+.list-box .li .px { color: var(--muted); font-size: 6.5pt; }
+.list-box .li.star .nm { color: var(--accent); }
+
+/* 飯店條 */
+.hotel-chip {
+  background: var(--pine-dark);
+  color: #fdfaf5;
+  padding: 2mm 3.5mm;
+  border-radius: 1mm;
+  margin: 2mm 0;
+  font-size: 7.5pt;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hotel-chip .lbl {
+  font-size: 6pt;
+  letter-spacing: 0.3em;
+  opacity: 0.8;
+}
+.hotel-chip .nm { font-weight: 700; font-size: 8.5pt; }
+.hotel-chip .ad { font-size: 6.5pt; opacity: 0.85; margin-top: 0.3mm; }
+
+/* Tips */
+.tip-box {
+  background: var(--paper-dark);
+  padding: 2mm 3.5mm;
+  border-radius: 1mm;
+  margin-top: 2mm;
+  font-size: 7pt;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.tip-box .tip-title {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 7.5pt;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.8mm;
+}
+
+/* 角落裝飾 emoji */
+.corner-deco {
+  position: absolute;
+  bottom: 3mm;
+  right: 5mm;
+  font-size: 18pt;
+  opacity: 0.4;
+}
+
+/* ======= 行前準備 ======= */
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3mm 2mm;
+  margin: 3mm 0 5mm;
+  padding: 0 11mm;
+}
+.chk {
+  display: flex;
+  align-items: center;
+  gap: 1.5mm;
+  font-size: 8pt;
+  color: var(--ink);
+}
+.chk-box {
+  width: 3.5mm;
+  height: 3.5mm;
+  border: 0.7pt solid var(--accent);
+  border-radius: 0.4mm;
+  flex-shrink: 0;
+}
+.chk-box.filled {
+  background: var(--accent);
+  position: relative;
+}
+.chk-box.filled::after {
+  content: "✓";
+  position: absolute;
+  top: -1.5mm;
+  left: 0.3mm;
+  color: white;
+  font-size: 5pt;
+  font-weight: 800;
+}
+.check-page-sh {
+  padding: 0 11mm;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 9pt;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 2.5mm;
+  margin: 3mm 0 2mm;
+}
+.check-page-sh::before {
+  content: "";
+  display: inline-block;
+  width: 3.5mm;
+  height: 3.5mm;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23c8483a'><path d='M1 2h4v12H1zm5 0h4v12H6zm5 0h4v12h-4z' stroke='%23c8483a' stroke-width='0.5'/></svg>") no-repeat center;
+  background-size: contain;
+}
+
+/* ======= 住宿資訊頁 ======= */
+.hotel-section { padding: 0 12mm; }
+.hotel-card {
+  margin-bottom: 4mm;
+  padding-bottom: 3mm;
+  border-bottom: 0.4pt dashed var(--line);
+}
+.hotel-card:last-child { border-bottom: none; }
+.hotel-title {
+  font-weight: 700;
+  font-size: 9.5pt;
+  color: var(--ink);
+  margin-bottom: 0.5mm;
+}
+.hotel-sub {
+  font-size: 7pt;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 0.5mm;
+}
+.hotel-dates {
+  font-size: 7.5pt;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1.5mm;
+}
+.hotel-detail {
+  display: grid;
+  grid-template-columns: 15mm 1fr;
+  gap: 1mm 2mm;
+  font-size: 7.5pt;
+  margin-top: 1.5mm;
+}
+.hotel-detail .lbl {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 6.8pt;
+}
+
+/* 緊急 */
+.emg-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3mm;
+  padding: 0 12mm;
+  margin-top: 2mm;
+}
+.emg-box {
+  border: 0.5pt solid var(--line);
+  border-radius: 1mm;
+  padding: 3mm;
+  background: rgba(253, 250, 245, 0.4);
+}
+.emg-box.warn { border-color: var(--accent); background: rgba(200,72,58,0.08); }
+.emg-box h4 {
+  font-size: 8pt;
+  color: var(--ink);
+  margin-bottom: 1.5mm;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+.emg-box.warn h4 { color: var(--accent); }
+.emg-box .num-big {
+  font-size: 14pt;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.1;
+  margin: 1mm 0;
+}
+.emg-box.warn .num-big { color: var(--accent); }
+.emg-box p { font-size: 7pt; line-height: 1.45; color: var(--ink); margin-top: 1mm; }
+
+/* 封底 */
+.back-cover .back-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30mm 18mm 25mm;
+  text-align: center;
+}
+.back-mountain { width: 70mm; height: 58mm; margin-bottom: 8mm; }
+.back-year { font-size: 10pt; color: var(--ink); margin-bottom: 4mm; }
+.back-names {
+  font-size: 12pt; font-weight: 700;
+  letter-spacing: 0.3em; color: var(--ink);
+  padding-left: 0.3em; margin-bottom: 3mm;
+}
+.back-route { font-size: 8pt; color: var(--ink-soft); letter-spacing: 0.1em; }
+.back-stamp {
+  margin-top: 5mm; width: 11mm; height: 11mm;
+  border-radius: 50%; background: var(--accent); color: #fdfaf5;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9pt; font-weight: 700;
+}
+
+@media screen {
+  body { background: #ddd; padding: 20px 0; }
+  .page { box-shadow: 0 2px 10px rgba(0,0,0,0.15); margin: 0 auto 20px; }
+}
+@media print {
+  html, body {
+    background: var(--paper);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><g fill='%239c8560' fill-opacity='0.5'><ellipse cx='15' cy='12' rx='1.2' ry='0.5'/><ellipse cx='47' cy='8' rx='0.8' ry='1.5'/><ellipse cx='78' cy='15' rx='1.5' ry='0.6'/><circle cx='110' cy='20' r='0.9'/><ellipse cx='145' cy='7' rx='1.8' ry='0.7'/><circle cx='170' cy='18' r='1'/></g></svg>");
+  }
+  .page { box-shadow: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== P1 封面 ========== -->
+<div class="page">
+  <div class="cover-inner">
+    <svg class="cover-illust" viewBox="0 0 400 350" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="70" cy="55" r="14" fill="none" stroke="#2b2a26" stroke-width="1.5"/>
+      <circle cx="76" cy="52" r="12" fill="#ebdfc0"/>
+      <g stroke="#2b2a26" stroke-width="1.2" fill="none">
+        <path d="M120 40 l3 3 M126 43 l-3 -3 M123 40 l0 6"/>
+        <path d="M340 70 l3 3 M346 73 l-3 -3 M343 70 l0 6"/>
+        <path d="M280 35 l3 3 M286 38 l-3 -3 M283 35 l0 6"/>
+      </g>
+      <g fill="none" stroke="#2b2a26" stroke-width="1.5">
+        <path d="M140 75 Q148 65 158 70 Q168 60 180 68 Q192 64 200 75 Q190 82 170 80 Q150 82 140 75z"/>
+        <path d="M250 55 Q256 48 265 52 Q272 45 280 50 Q288 55 285 62 Q270 65 255 62 Q248 60 250 55z"/>
+      </g>
+      <g stroke="#2b2a26" stroke-width="1.8" fill="none" stroke-linejoin="round">
+        <path d="M0 200 L60 130 L100 155 L140 115 L180 145 L220 100 L260 130 L300 115 L340 150 L400 130 L400 220 L0 220z" fill="#ebdfc0"/>
+        <path d="M140 115 L150 130 L135 135 L130 122 M220 100 L230 118 L215 122 L212 108 M260 130 L275 150 L255 155 L250 140" stroke-width="1.2"/>
+        <path d="M0 250 L40 200 L80 230 L130 185 L180 225 L230 195 L290 225 L350 200 L400 240 L400 280 L0 280z" fill="#d8c89f" stroke="#2b2a26"/>
+      </g>
+      <g stroke="#2b2a26" stroke-width="1.3" fill="none">
+        <line x1="20" y1="295" x2="100" y2="295"/>
+        <line x1="130" y1="298" x2="180" y2="298"/>
+        <line x1="200" y1="295" x2="280" y2="295"/>
+        <line x1="310" y1="298" x2="380" y2="298"/>
+        <line x1="40" y1="310" x2="130" y2="310"/>
+        <line x1="160" y1="312" x2="250" y2="312"/>
+        <line x1="280" y1="310" x2="360" y2="310"/>
+      </g>
+      <g stroke="#2b2a26" stroke-width="1.5" fill="#5a7a4f" stroke-linejoin="round">
+        <path d="M60 255 L52 245 L58 245 L50 233 L56 233 L48 220 L72 220 L64 233 L70 233 L62 245 L68 245 L60 255z"/>
+        <path d="M85 260 L78 251 L83 251 L76 240 L82 240 L76 228 L94 228 L88 240 L94 240 L87 251 L92 251 L85 260z"/>
+        <path d="M335 258 L328 249 L333 249 L326 238 L332 238 L326 226 L344 226 L338 238 L344 238 L337 249 L342 249 L335 258z"/>
+      </g>
+      <g fill="#c43d2a" stroke="#8a1e0f" stroke-width="1" stroke-linejoin="round">
+        <path d="M350 40 L356 28 L360 35 L368 22 L367 35 L378 30 L370 40 L383 45 L370 48 L376 58 L364 52 L363 62 L358 54 L352 62 L350 52 L340 55 L346 48 L336 44 L346 42 L336 34 L348 36 L344 24 L352 30z"/>
+      </g>
+      <g stroke="#2b2a26" stroke-width="1.5" fill="none">
+        <path d="M170 295 Q200 298 230 295 Q225 303 200 305 Q175 303 170 295z" fill="#8d6a45"/>
+        <line x1="200" y1="285" x2="200" y2="300" stroke-width="1.2"/>
+      </g>
+    </svg>
+    <div class="cover-title">CANADA</div>
+    <div class="cover-sub">Canadian Rockies · Vancouver</div>
+    <div class="cover-dates">2026 · 04 · 24 — 05 · 02</div>
+  </div>
+</div>
+
+<!-- ========== P2 裡封 / 行程摘要 ========== -->
+<div class="page">
+  <div class="section-title">行 程 摘 要</div>
+  <div style="padding:3mm 12mm 0">
+    <div style="text-align:center;margin-bottom:6mm;padding-bottom:4mm;border-bottom:1pt solid var(--line)">
+      <div style="font-size:9pt;letter-spacing:0.3em;color:var(--ink-soft);margin-bottom:2mm">CANADIAN ROCKIES · VANCOUVER</div>
+      <div style="font-size:11pt;font-weight:700;color:var(--ink)">2026 · 04 · 24 — 05 · 02</div>
+      <div style="font-size:7.5pt;color:var(--muted);margin-top:1mm">9 天 8 夜 · TPE ⇌ YVR（CI 032 / CI 031）</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3mm;margin-bottom:5mm">
+      <div style="display:grid;grid-template-columns:14mm 1fr;gap:2mm;align-items:center">
+        <div style="width:12mm;height:12mm;border-radius:50%;background:var(--pine-dark);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:4.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:10pt;font-weight:700">1</div></div>
+        <div><div style="font-size:7.5pt;font-weight:700">抵達溫哥華</div><div style="font-size:6pt;color:var(--muted)">04.24 · 旋轉餐廳</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:14mm 1fr;gap:2mm;align-items:center">
+        <div style="width:12mm;height:12mm;border-radius:50%;background:var(--pine-dark);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:4.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:10pt;font-weight:700">2</div></div>
+        <div><div style="font-size:7.5pt;font-weight:700">市區經典日</div><div style="font-size:6pt;color:var(--muted)">04.25 · Granville Is.</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:14mm 1fr;gap:2mm;align-items:center">
+        <div style="width:12mm;height:12mm;border-radius:50%;background:var(--pine-dark);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:4.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:10pt;font-weight:700">3</div></div>
+        <div><div style="font-size:7.5pt;font-weight:700">飛 Calgary</div><div style="font-size:6pt;color:var(--muted)">04.26 · Stephen Ave</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:14mm 1fr;gap:2mm;align-items:center">
+        <div style="width:12mm;height:12mm;border-radius:50%;background:var(--pine-dark);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:4.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:10pt;font-weight:700">4</div></div>
+        <div><div style="font-size:7.5pt;font-weight:700">進入 Banff</div><div style="font-size:6pt;color:var(--muted)">04.27 · Gondola</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:14mm 1fr;gap:2mm;align-items:center">
+        <div style="width:12mm;height:12mm;border-radius:50%;background:var(--accent);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:4.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:10pt;font-weight:700">5</div></div>
+        <div><div style="font-size:7.5pt;font-weight:700">冰原大道 🔥</div><div style="font-size:6pt;color:var(--muted)">04.28 · Lake Louise</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:14mm 1fr;gap:2mm;align-items:center">
+        <div style="width:12mm;height:12mm;border-radius:50%;background:var(--pine-dark);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:4.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:10pt;font-weight:700">6</div></div>
+        <div><div style="font-size:7.5pt;font-weight:700">回到海岸</div><div style="font-size:6pt;color:var(--muted)">04.29 · English Bay</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:14mm 1fr;gap:2mm;align-items:center">
+        <div style="width:12mm;height:12mm;border-radius:50%;background:var(--accent);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:4.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:10pt;font-weight:700">7</div></div>
+        <div><div style="font-size:7.5pt;font-weight:700">Sea to Sky 🔥</div><div style="font-size:6pt;color:var(--muted)">04.30 · Whistler</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:14mm 1fr;gap:2mm;align-items:center">
+        <div style="width:12mm;height:12mm;border-radius:50%;background:var(--pine-dark);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:4.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:10pt;font-weight:700">8</div></div>
+        <div><div style="font-size:7.5pt;font-weight:700">Stanley Park</div><div style="font-size:6pt;color:var(--muted)">05.01 · 水族館</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:14mm 1fr;gap:2mm;align-items:center">
+        <div style="width:12mm;height:12mm;border-radius:50%;background:var(--pine-dark);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:4.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:10pt;font-weight:700">9</div></div>
+        <div><div style="font-size:7.5pt;font-weight:700">返程 TPE</div><div style="font-size:6pt;color:var(--muted)">05.02 · CI 031</div></div>
+      </div>
+    </div>
+
+    <div class="tip-box" style="margin-top:3mm;border-left:2pt solid var(--accent)">
+      <div class="tip-title">🍁 旅途叮嚀</div>
+      · 時差 −15h（Vancouver）/ −14h（Banff）<br>
+      · 匯率：1 CAD ≈ 22.2 TWD（出發前確認）<br>
+      · eSIM：Airalo / Ubigi · 電信：Rogers / Telus<br>
+      · 餐廳小費 15–20% · Uber 10–15%<br>
+      · ArriveCAN 預先申報可走專用通道
+    </div>
+  </div>
+</div>
+
+<!-- ================= Day 1 LEFT (P3) ================= -->
+<div class="page day-page">
+  <div class="day-hero" style="background:linear-gradient(135deg,#3a4d6a 0%,#6a8ba5 50%,#a8c4d8 100%)">
+    <div class="day-hero-text">
+      <div class="day-hero-num">DAY 1</div>
+      <div class="day-hero-title">ARRIVAL</div>
+      <div class="day-hero-sub">VANCOUVER NIGHT VIEW</div>
+    </div>
+  </div>
+  <div class="day-info">
+    <div class="day-heading">第 1 天 <span style="color:var(--muted);margin:0 2mm">·</span> <span class="en">To Vancouver</span></div>
+    <div class="day-date-line">04.24 · FRIDAY</div>
+    <div class="day-route">抵達溫哥華 · 旋轉餐廳晚餐</div>
+  </div>
+  <div class="day-timeline">
+    <div class="sh" style="margin-top:1mm">去程航班</div>
+    <div class="tl-row">
+      <div class="tl-time">23:35</div>
+      <div class="tl-content">
+        <div class="main">TPE 起飛</div>
+        <div class="sub">中華航空 CI 032 · 桃園機場</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">19:20</div>
+      <div class="tl-content">
+        <div class="main">抵達 YVR</div>
+        <div class="sub">飛行 10h 45m · 時差 −15h · 同日</div>
+      </div>
+    </div>
+
+    <div class="sh" style="margin-top:3mm">入境與接駁</div>
+    <div class="tl-row">
+      <div class="tl-time">19:20</div>
+      <div class="tl-content">
+        <div class="main">入境通關 · 提領行李</div>
+        <div class="sub">使用 ArriveCAN 預先申報可走專用通道</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">20:00</div>
+      <div class="tl-content">
+        <div class="main">Uber → 飯店</div>
+        <div class="sub">車程 25–30 min · ~CAD $35</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">20:30</div>
+      <div class="tl-content">
+        <div class="main">EXchange Hotel Check-in</div>
+        <div class="sub">475 Howe St, Vancouver</div>
+      </div>
+    </div>
+  </div>
+  <div class="corner-deco">✈️</div>
+</div>
+
+<!-- ================= Day 1 RIGHT (P3) ================= -->
+<div class="page day-page">
+  <div class="day-right-head">
+    <span class="lbl">DAY 1 · CONTINUED</span>
+    <span class="num">04.24</span>
+  </div>
+  <div class="day-timeline">
+    <div class="sh" style="margin-top:2mm">今夜重點 晚餐</div>
+    <div class="tl-row">
+      <div class="tl-time">21:00</div>
+      <div class="tl-content">
+        <div class="main hl">Top Of Vancouver 旋轉餐廳</div>
+        <div class="sub">Harbour Centre 頂樓 · 555 W Hastings St · 飯店走 5 min</div>
+      </div>
+    </div>
+
+    <div class="list-box">
+      <div class="list-title">餐廳資訊</div>
+      <div class="li"><span class="nm">360° 旋轉觀景餐廳</span></div>
+      <div class="li">約每小時轉一圈，可看 Coal Harbour、獅門大橋、North Shore 群山</div>
+      <div class="li"><span class="px">~CAD $60–90/人 · Vancouver 夜景首選</span></div>
+    </div>
+
+    <div class="tip-box" style="border-left:2pt solid var(--accent)">
+      <div class="tip-title">⚠️ 注意事項</div>
+      建議 OpenTable 提前訂位 · 營業到 22:00<br>
+      抵達飯店後建議直接前往（不要休息太久怕錯過）
+    </div>
+
+    <div class="hotel-chip">
+      <div>
+        <div class="lbl">今晚住宿</div>
+        <div class="nm">EXchange Hotel Vancouver</div>
+        <div class="ad">475 Howe St · 4/24–4/26 (2 nights)</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">💡 抵達當天提醒</div>
+      · 時差 −15h，第一晚會很想睡 → 早點去吃飯再回飯店<br>
+      · 匯率：1 CAD ≈ 22 TWD<br>
+      · 手機開啟 eSIM 或先連飯店 Wi-Fi<br>
+      · 加拿大習慣小費 15–20%（餐廳結帳看帳單）
+    </div>
+  </div>
+  <div class="corner-deco">🌉</div>
+</div>
+
+<!-- ================= Day 2 LEFT (P4) ================= -->
+<div class="page day-page">
+  <div class="day-hero" style="background:linear-gradient(135deg,#7a5a35 0%,#a8794a 50%,#c99864 100%)">
+    <div class="day-hero-text">
+      <div class="day-hero-num">DAY 2</div>
+      <div class="day-hero-title">CITY CLASSICS</div>
+      <div class="day-hero-sub">GASTOWN &amp; GRANVILLE</div>
+    </div>
+  </div>
+  <div class="day-info">
+    <div class="day-heading">第 2 天 <span style="color:var(--muted);margin:0 2mm">·</span> <span class="en">Vancouver City</span></div>
+    <div class="day-date-line">04.25 · SATURDAY</div>
+    <div class="day-route">Brunch ➜ Gastown ➜ Robson ➜ Granville Island</div>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">10:30</div>
+      <div class="tl-content">
+        <div class="main">Cafe Medina <span class="hl">✅ 已訂位</span></div>
+        <div class="sub">米其林推薦 · 摩洛哥風早午餐 · ~CAD $20–30</div>
+        <div class="sub"><span class="hl">💡</span> Tock 訂位 · 建議 10:15 到場 check-in</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">12:00</div>
+      <div class="tl-content">
+        <div class="main">Gastown 蓋斯鎮</div>
+        <div class="sub">蒸汽鐘 · 紅磚街 · 從 Medina 步行 10 min</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">13:45</div>
+      <div class="tl-content">
+        <div class="main">Robson Street 購物</div>
+        <div class="sub">Vancouver 最熱鬧購物街</div>
+      </div>
+    </div>
+
+    <div class="list-box">
+      <div class="list-title">🛍️ Robson 必逛（7 間）</div>
+      <div class="li"><span class="nm">Roots</span><span class="px"> · 加拿大經典品牌</span></div>
+      <div class="li"><span class="nm">Lululemon</span><span class="px"> · 旗艦店</span></div>
+      <div class="li"><span class="nm">Arc'teryx</span><span class="px"> · 戶外機能服飾</span></div>
+      <div class="li"><span class="nm">Muji / Oomomo</span><span class="px"> · 日系雜貨＋百元店</span></div>
+      <div class="li"><span class="nm">Sephora</span><span class="px"> · 美妝（加拿大價格比台灣便宜）</span></div>
+      <div class="li"><span class="nm">Mister Artisan Ice Cream</span><span class="px"> · 手工冰淇淋</span></div>
+      <div class="li"><span class="nm">Grand Maple Gift</span><span class="px"> · 楓糖漿伴手禮</span></div>
+    </div>
+
+    <div class="tl-row">
+      <div class="tl-time">15:00</div>
+      <div class="tl-content">
+        <div class="main">下午茶（選擇性）</div>
+        <div class="sub">Thierry 法式甜點／Japadog 日式熱狗</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= Day 2 RIGHT (P5) ================= -->
+<div class="page day-page">
+  <div class="day-right-head">
+    <span class="lbl">DAY 2 · CONTINUED</span>
+    <span class="num">04.25</span>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">15:15</div>
+      <div class="tl-content">
+        <div class="main">🚢 步行至 Hornby Street Dock</div>
+        <div class="sub">從 Robson 沿 Hornby St 一路逛下去 · 12–15 min</div>
+        <div class="sub">碼頭在 Hornby St ＆ Beach Ave 交叉口（David Lam Park 旁）</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">15:30</div>
+      <div class="tl-content">
+        <div class="main">Aquabus → Granville Island</div>
+        <div class="sub">此站僅 Aquabus（彩色船）· 5 min · CAD $4</div>
+        <div class="sub">每 5–15 min 一班，上船付現或刷卡</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">15:35</div>
+      <div class="tl-content">
+        <div class="main">Granville Island 格蘭維爾島</div>
+        <div class="sub">Public Market 美食市集 · 碼頭散步</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">16:00</div>
+      <div class="tl-content">
+        <div class="main hl">Kaboodles Toy Store</div>
+        <div class="sub">Granville Island 內 · Jellycat 官方經銷商</div>
+        <div class="sub">價格跟官網一樣，款式 Vancouver 最齊全</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">17:50</div>
+      <div class="tl-content">
+        <div class="main hl">🚗 回程 Uber → Coal Harbour</div>
+        <div class="sub">⚠️ Coal Harbour 在北邊，<b>渡輪不到北岸</b>，直接叫 Uber 最快</div>
+        <div class="sub">從 Granville Island 出口 → 過 Granville Bridge · 10–15 min · ~CAD $15–20</div>
+        <div class="sub">備案：回搭 Aquabus 到 Hornby 再叫車 / 搭公車 50 到 downtown</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">18:30</div>
+      <div class="tl-content">
+        <div class="main">Coal Harbour 海景晚餐</div>
+      </div>
+    </div>
+
+    <div class="list-box">
+      <div class="list-title">🍽️ 晚餐選擇（4 間）</div>
+      <div class="li star"><span class="nm">⭐ Cactus Club Cafe</span><span class="px"> · 夕陽海景首選 · ~$25–40</span></div>
+      <div class="li"><span class="nm">Lift Bar &amp; Grill</span><span class="px"> · 多層露台最強海景 · ~$38–58</span></div>
+      <div class="li"><span class="nm">Cardero's</span><span class="px"> · 海鮮＋Live 音樂 · ~$40–55</span></div>
+      <div class="li"><span class="nm">JOEY Shipyards</span><span class="px"> · 景觀佳備選 · ~$30–50</span></div>
+    </div>
+
+    <div class="hotel-chip">
+      <div>
+        <div class="lbl">今晚住宿</div>
+        <div class="nm">EXchange Hotel Vancouver</div>
+        <div class="ad">475 Howe St · Night 2 of 2</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">💡 今日提醒</div>
+      · Granville Island 最晚 18:00 關店，逛完先衝回市區吃晚餐<br>
+      · Cafe Medina 排隊即便有訂位也要 10:15 到<br>
+      · Robson St 購物退稅門檻低，但退稅要出關辦理
+    </div>
+  </div>
+  <div class="corner-deco">⛵</div>
+</div>
+
+<!-- ================= Day 3 LEFT (P6) ================= -->
+<div class="page day-page">
+  <div class="day-hero" style="background:linear-gradient(135deg,#4a6a40 0%,#7a9456 50%,#a8ba7a 100%)">
+    <div class="day-hero-text">
+      <div class="day-hero-num">DAY 3</div>
+      <div class="day-hero-title">FLY TO CALGARY</div>
+      <div class="day-hero-sub">SHOPPING &amp; SUNSET</div>
+    </div>
+  </div>
+  <div class="day-info">
+    <div class="day-heading">第 3 天 <span style="color:var(--muted);margin:0 2mm">·</span> <span class="en">To Calgary</span></div>
+    <div class="day-date-line">04.26 · SUNDAY</div>
+    <div class="day-route">YVR → YYC · 購物商場雙連發 · Stephen Ave 夜景</div>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">07:00</div>
+      <div class="tl-content">
+        <div class="main">早餐</div>
+        <div class="sub">Cafe Medina / 49th Parallel Coffee</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">07:30</div>
+      <div class="tl-content">
+        <div class="main">Uber → YVR</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">10:40</div>
+      <div class="tl-content">
+        <div class="main">YVR 起飛 → YYC</div>
+        <div class="sub">飛行 1h 15m · 時差 +1h</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">13:15</div>
+      <div class="tl-content">
+        <div class="main">YYC 取車</div>
+        <div class="sub">國際駕照 + 台灣駕照 · AWD/SUV 建議</div>
+        <div class="warn">⚠️ 確認合約允許冰原大道（部分為碎石路）</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">14:00</div>
+      <div class="tl-content">
+        <div class="main">Southcentre Mall</div>
+        <div class="sub">機場南 10 min · Calgary 最大商場之一</div>
+        <ul>
+          <li>The North Face · 外套背包</li>
+          <li>Lululemon · 瑜珈服</li>
+          <li>Roots · 加拿大經典品牌</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">16:00</div>
+      <div class="tl-content">
+        <div class="main">CF Chinook Centre</div>
+        <div class="sub">Calgary 最大購物中心 · 251 間店鋪</div>
+        <ul>
+          <li><span style="color:var(--accent);font-weight:700">Arc'teryx</span> · Alberta 稅 5% 比 BC 便宜</li>
+          <li><span style="color:var(--accent);font-weight:700">Sport Chek</span> · Owala 水壺</li>
+          <li><span style="color:var(--accent);font-weight:700">The Discovery Hut</span> · Jellycat 經銷商</li>
+          <li>Lululemon · Roots · Uniqlo 都有</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= Day 3 RIGHT (P7) ================= -->
+<div class="page day-page">
+  <div class="day-right-head">
+    <span class="lbl">DAY 3 · CONTINUED</span>
+    <span class="num">04.26</span>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">18:00</div>
+      <div class="tl-content">
+        <div class="main">Stephen Ave <span class="hl">🎬 韓劇拍攝地</span></div>
+        <div class="sub">803 1 St SW · 19 世紀街景步行街</div>
+        <div class="sub">離飯店步行 5 分 · 黃昏光線最美</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">18:45</div>
+      <div class="tl-content">
+        <div class="main">晚餐（建議步行街上吃）</div>
+      </div>
+    </div>
+
+    <div class="list-box">
+      <div class="list-title">🍽️ 晚餐選項</div>
+      <div class="li star"><span class="nm">⭐ Hy's Steakhouse</span><span class="px"> · 1955 老店碳烤牛排 · ~$50–80</span></div>
+      <div class="li"><span class="nm">CRAFT Beer Market</span><span class="px"> · 100+ 精釀 · ~$25–40</span></div>
+      <div class="li"><span class="nm">Earls Southcentre</span><span class="px"> · 牛排/漢堡 · ~$25–40</span></div>
+      <div class="li"><span class="nm">Tokyo Street Market</span><span class="px"> · 日式拉麵/壽司 · ~$15–25</span></div>
+      <div class="li"><span class="nm">Aleppo Shawarma</span><span class="px"> · 沙威瑪平價 · ~$12–18</span></div>
+    </div>
+
+    <div class="tl-row">
+      <div class="tl-time">20:00</div>
+      <div class="tl-content">
+        <div class="main">Crescent Heights Lookout</div>
+        <div class="sub">俯瞰 Calgary 天際線 + Bow River · 免費景點</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">20:45</div>
+      <div class="tl-content">
+        <div class="main">Check-in 飯店</div>
+      </div>
+    </div>
+
+    <div class="hotel-chip">
+      <div>
+        <div class="lbl">今晚住宿</div>
+        <div class="nm">The Westley Calgary</div>
+        <div class="ad">Tapestry Collection by Hilton</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">💡 明日準備</div>
+      · 明天 Banff 入口站買 Parks Pass 3-day $63<br>
+      · 可先去超市買零食飲料上山備用<br>
+      · 記得帶外套，Banff 氣溫比 Calgary 低 5-8°C
+    </div>
+  </div>
+  <div class="corner-deco">🛍️</div>
+</div>
+
+<!-- ================= Day 4 LEFT (P8) ================= -->
+<div class="page day-page">
+  <div class="day-hero" style="background:linear-gradient(135deg,#5a4a32 0%,#8a6e48 50%,#c69263 100%)">
+    <div class="day-hero-text">
+      <div class="day-hero-num">DAY 4</div>
+      <div class="day-hero-title">INTO THE ROCKIES</div>
+      <div class="day-hero-sub">BANFF GONDOLA SUNSET</div>
+    </div>
+  </div>
+  <div class="day-info">
+    <div class="day-heading">第 4 天 <span style="color:var(--muted);margin:0 2mm">·</span> <span class="en">To Banff</span></div>
+    <div class="day-date-line">04.27 · MONDAY</div>
+    <div class="day-route">Hwy 1 西行 · Banff 購物 · Gondola 夕陽 🔥</div>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">08:30</div>
+      <div class="tl-content">
+        <div class="main">The Westley → Banff</div>
+        <div class="sub">沿 Hwy 1 西行 · 約 1h 20m</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">10:30</div>
+      <div class="tl-content">
+        <div class="main">Hotel Canoe Check-in · 放行李</div>
+        <div class="sub">入口站買 <span class="hl">Parks Pass 3-day CAD $63</span></div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">11:00</div>
+      <div class="tl-content">
+        <div class="main">Vermilion Lakes</div>
+        <div class="sub">飯店旁 5 min · 山景倒影拍照絕佳</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">12:00</div>
+      <div class="tl-content">
+        <div class="main">午餐</div>
+      </div>
+    </div>
+
+    <div class="list-box">
+      <div class="list-title">🍽️ 午餐選項</div>
+      <div class="li"><span class="nm">Hankki</span><span class="px"> · 韓式 BBQ 街頭小吃 · ~$15–22</span></div>
+      <div class="li"><span class="nm">Ramen Arashi</span><span class="px"> · 拉麵 (Sundance Mall 2F) · ~$18–22</span></div>
+      <div class="li"><span class="nm">The Balkan</span><span class="px"> · 地中海料理 · ~$18–28</span></div>
+      <div class="li"><span class="nm">Bear Street Tavern</span><span class="px"> · 野牛漢堡＋精釀 · ~$20–30</span></div>
+    </div>
+
+    <div class="tl-row">
+      <div class="tl-time">13:30</div>
+      <div class="tl-content">
+        <div class="main">Banff Avenue 購物</div>
+        <div class="sub">戶外品牌：Arc'teryx · Patagonia · Canada Goose · The North Face</div>
+      </div>
+    </div>
+
+    <div class="list-box">
+      <div class="list-title">🛍️ 特色店鋪（必逛）</div>
+      <div class="li"><span class="nm">Rocky Mountain Soap</span><span class="px"> · 天然手工皂 · 伴手禮首選</span></div>
+      <div class="li"><span class="nm">BRANCHES Marketplace</span><span class="px"> · 加拿大手工藝品</span></div>
+      <div class="li"><span class="nm">Banff Tea Co.</span><span class="px"> · 洛磯山脈主題茶葉</span></div>
+      <div class="li"><span class="nm">Duck Duck Moose</span><span class="px"> · 1973 在地老店</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= Day 4 RIGHT (P9) ================= -->
+<div class="page day-page">
+  <div class="day-right-head">
+    <span class="lbl">DAY 4 · CONTINUED</span>
+    <span class="num">04.27</span>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">17:00</div>
+      <div class="tl-content">
+        <div class="main">Cascade of Time Garden</div>
+        <div class="sub">🎬 韓劇隱藏版拍照點 · 101 Mountain Ave</div>
+        <div class="sub">俯瞰 Banff Avenue + Mount Cascade 山景</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">18:30</div>
+      <div class="tl-content">
+        <div class="main hl">🚡 Banff Gondola 夕陽場 ✅</div>
+        <div class="sub">日落 20:58 · Golden Hour 20:00 開始</div>
+        <div class="sub">Family Experience CAD $138 · 約 8 min 上山</div>
+        <ul>
+          <li>18:38–20:58 山頂散步、拍照、等夕陽</li>
+          <li>Castle Mountain Coffee 可輕食</li>
+          <li>~21:00 下山</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">21:15</div>
+      <div class="tl-content">
+        <div class="main">晚餐（下山後）</div>
+      </div>
+    </div>
+
+    <div class="list-box">
+      <div class="list-title">🍽️ 晚餐選擇</div>
+      <div class="li star"><span class="nm">⭐ Park Distillery</span><span class="px"> · 三道式 $37 · 營火料理＋自釀 · 建議先訂位</span></div>
+      <div class="li"><span class="nm">The Maple Leaf</span><span class="px"> · 加拿大名菜 Alberta 牛肉 · ~$35–55</span></div>
+      <div class="li"><span class="nm">Brazen</span><span class="px"> · Mount Royal Hotel 內時尚料理 · ~$30–50</span></div>
+      <div class="li"><span class="nm">Pizzeria Sophia</span><span class="px"> · Banff 最好吃披薩 · ~$20–30</span></div>
+    </div>
+
+    <div class="hotel-chip">
+      <div>
+        <div class="lbl">今晚住宿</div>
+        <div class="nm">Hotel Canoe and Suites</div>
+        <div class="ad">Banff, Alberta · 1 night</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">💡 提醒</div>
+      · 明天冰原大道自駕重頭戲，早點睡！<br>
+      · Gondola 上山冷，多帶一件外套<br>
+      · Park Distillery 建議事前 OpenTable 訂位
+    </div>
+  </div>
+  <div class="corner-deco">🏔️</div>
+</div>
+
+<!-- ================= Day 5 LEFT (P10) ================= -->
+<div class="page day-page">
+  <div class="day-hero" style="background:linear-gradient(135deg,#2e4a5a 0%,#5a7a8a 50%,#a0c8d4 100%)">
+    <div class="day-hero-text">
+      <div class="day-hero-num">DAY 5 · 🔥</div>
+      <div class="day-hero-title">ICEFIELDS PARKWAY</div>
+      <div class="day-hero-sub">LAKE LOUISE · PEYTO</div>
+    </div>
+  </div>
+  <div class="day-info">
+    <div class="day-heading">第 5 天 <span style="color:var(--muted);margin:0 2mm">·</span> <span class="en">Icefields Parkway</span></div>
+    <div class="day-date-line">04.28 · TUESDAY <span class="hl" style="color:var(--accent)">· 🔥 重頭戲</span></div>
+    <div class="day-route">Hotel Canoe（Banff）→ 今晚 Mountaineer Lodge（Lake Louise）</div>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">09:00</div>
+      <div class="tl-content">
+        <div class="main">Johnston Canyon</div>
+        <div class="sub">飯店出發約 22 min · 峽谷瀑布步道</div>
+        <div class="sub">4 月底可能有冰瀑殘景，非常壯觀</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">11:30</div>
+      <div class="tl-content">
+        <div class="main hl">Lake Louise 路易斯湖</div>
+        <div class="sub">Johnston Canyon 出發約 25 min</div>
+        <div class="sub">4 月底湖面可能仍結冰，雪山倒影絕景</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">12:30</div>
+      <div class="tl-content">
+        <div class="main">午餐</div>
+      </div>
+    </div>
+
+    <div class="list-box">
+      <div class="list-title">🍽️ 午餐選項</div>
+      <div class="li star"><span class="nm">⭐ Chateau Lake Louise — Louiza</span><span class="px"> · 城堡內湖景餐廳 · 免訂位 · ~$25–45</span></div>
+      <div class="li"><span class="nm">Trailhead Café</span><span class="px"> · 咖啡+輕食 · Lake Louise Village · ~$12–18</span></div>
+      <div class="li"><span class="nm">Timberwolf Pizza</span><span class="px"> · 窯烤披薩 · Lake Louise Inn 內 · ~$18–28</span></div>
+    </div>
+
+    <div class="tl-row">
+      <div class="tl-time">14:00</div>
+      <div class="tl-content">
+        <div class="main">Bow Lake</div>
+        <div class="sub">Lake Louise 出發約 25 min · 冰原大道沿線</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">15:00</div>
+      <div class="tl-content">
+        <div class="main hl">Peyto Lake 天青湖</div>
+        <div class="sub">Bow Lake 出發 15 min · 冰原大道地標</div>
+        <div class="sub">天青色湖水 · 俯瞰絕景</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= Day 5 RIGHT (P11) ================= -->
+<div class="page day-page">
+  <div class="day-right-head">
+    <span class="lbl">DAY 5 · CONTINUED</span>
+    <span class="num">04.28</span>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">17:00</div>
+      <div class="tl-content">
+        <div class="main">Check-in Mountaineer Lodge</div>
+        <div class="sub">Peyto Lake 回程約 35 min</div>
+        <div class="sub">Lake Louise, Alberta</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">19:00</div>
+      <div class="tl-content">
+        <div class="main">晚餐 · Lake Louise Village</div>
+      </div>
+    </div>
+
+    <div class="list-box">
+      <div class="list-title">🍽️ 晚餐選擇</div>
+      <div class="li star"><span class="nm">⭐ The Station Restaurant</span><span class="px"> · 百年火車站改建 · 氣氛絕佳 · ~$25–50</span></div>
+      <div class="li"><span class="nm">Whitehorn Bistro</span><span class="px"> · 山景景觀 · ~$25–30</span></div>
+      <div class="li"><span class="nm">Timberwolf Pizza</span><span class="px"> · 窯烤披薩 · Lake Louise Inn 內 · ~$18–28</span></div>
+      <div class="li"><span class="nm">Trailhead Café</span><span class="px"> · 輕食簡單吃 · ~$12–18</span></div>
+    </div>
+
+    <div class="hotel-chip">
+      <div>
+        <div class="lbl">今晚住宿</div>
+        <div class="nm">Mountaineer Lodge</div>
+        <div class="ad">Lake Louise · 1 night</div>
+      </div>
+    </div>
+
+    <div class="tip-box" style="border-left:2pt solid var(--accent)">
+      <div class="tip-title">🎫 Parks Canada Pass</div>
+      昨天在 Banff 入口站買的 3-day Group Pass 涵蓋今天 · 記得放車上
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">💡 自駕提醒</div>
+      · 冰原大道部分路段碎石，小心行駛<br>
+      · 4 月底高山湖仍可能結冰，保暖夠<br>
+      · 手機訊號差 → 下載離線 Google Maps<br>
+      · 加油在 Lake Louise Village 加滿再上路<br>
+      · 留意野生動物（麋鹿、熊）
+    </div>
+  </div>
+  <div class="corner-deco">🦌</div>
+</div>
+
+<!-- ================= Day 6 LEFT (P12) ================= -->
+<div class="page day-page">
+  <div class="day-hero" style="background:linear-gradient(135deg,#c44a3a 0%,#e08060 50%,#f4b394 100%)">
+    <div class="day-hero-text">
+      <div class="day-hero-num">DAY 6</div>
+      <div class="day-hero-title">BACK TO THE COAST</div>
+      <div class="day-hero-sub">ENGLISH BAY SUNSET</div>
+    </div>
+  </div>
+  <div class="day-info">
+    <div class="day-heading">第 6 天 <span style="color:var(--muted);margin:0 2mm">·</span> <span class="en">To Vancouver</span></div>
+    <div class="day-date-line">04.29 · WEDNESDAY <span style="color:var(--accent)">· ⚠️ 14:30 前還車</span></div>
+    <div class="day-route">Mountaineer Lodge → Calgary → Vancouver → English Bay</div>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">09:00</div>
+      <div class="tl-content">
+        <div class="main">Mountaineer Lodge 退房</div>
+        <div class="sub">開往 Calgary 約 2h · 185 km</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">11:00</div>
+      <div class="tl-content">
+        <div class="main">Calgary 市區小停</div>
+        <ul>
+          <li>Prince's Island Park</li>
+          <li>Stephen Ave 步行街（🎬 韓劇拍攝地）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">12:30</div>
+      <div class="tl-content">
+        <div class="main hl">Galaxie Diner 午餐</div>
+        <div class="sub">🎬《愛情怎麼翻譯》拍攝地</div>
+        <div class="sub">1413 11 St SW · 1940s 復古 Diner</div>
+        <div class="sub">~CAD $20–30 · Brunch 人氣名店</div>
+        <ul>
+          <li>🥞 Pancakes（招牌鬆餅）</li>
+          <li>🍳 Montreal Smoked Meat Eggs Benedict</li>
+          <li>🥤 復古奶昔 Milkshake</li>
+          <li>💺 可坐到劇中金宣虎＋高允貞的位子</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tip-box" style="border-left:2pt solid var(--accent);background:rgba(200,72,58,0.12)">
+      <div class="tip-title" style="color:var(--accent)">⚠️ 13:45 出發還車</div>
+      Galaxie → YYC 約 20 min · 14:15 抵達（預留 15 min 緩衝）<br>
+      <strong>必須 14:30 前還車 · 超時以小時加收！</strong>
+    </div>
+  </div>
+</div>
+
+<!-- ================= Day 6 RIGHT (P13) ================= -->
+<div class="page day-page">
+  <div class="day-right-head">
+    <span class="lbl">DAY 6 · CONTINUED</span>
+    <span class="num">04.29</span>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">14:30</div>
+      <div class="tl-content">
+        <div class="main">YYC 機場候機</div>
+        <div class="sub">還完車辦登機＋安檢</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">17:10</div>
+      <div class="tl-content">
+        <div class="main">YYC → YVR</div>
+        <div class="sub">17:35 抵達溫哥華</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">18:00</div>
+      <div class="tl-content">
+        <div class="main">Check-in Best Western Plus Sands</div>
+        <div class="sub">1755 Davie Street, Vancouver</div>
+        <div class="sub">📞 +1 604-682-1831</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">19:00</div>
+      <div class="tl-content">
+        <div class="main hl">English Bay 日落 🔥</div>
+        <div class="sub">完美時段 · 飯店步行即達</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">20:30</div>
+      <div class="tl-content">
+        <div class="main">English Bay 海邊晚餐</div>
+      </div>
+    </div>
+
+    <div class="list-box">
+      <div class="list-title">🍽️ 晚餐選擇</div>
+      <div class="li star"><span class="nm">⭐ Cactus Club Cafe English Bay</span><span class="px"> · 海邊夕陽 · ~$25–40</span></div>
+      <div class="li"><span class="nm">The Boathouse</span><span class="px"> · 海鮮 · English Bay 正對面 · ~$30–50</span></div>
+      <div class="li"><span class="nm">Espana</span><span class="px"> · 西班牙 Tapas · Denman St · ~$30–45</span></div>
+      <div class="li"><span class="nm">Stepho's Souvlaki</span><span class="px"> · 希臘料理大份量 CP 值高 · ~$15–22</span></div>
+    </div>
+
+    <div class="hotel-chip">
+      <div>
+        <div class="lbl">今晚住宿</div>
+        <div class="nm">Best Western Plus Sands ⭐⭐⭐</div>
+        <div class="ad">1755 Davie St · 4/29–5/1 (2 nights)</div>
+      </div>
+    </div>
+  </div>
+  <div class="corner-deco">🌊</div>
+</div>
+
+<!-- ================= Day 7 LEFT (P14) ================= -->
+<div class="page day-page">
+  <div class="day-hero" style="background:linear-gradient(135deg,#3a5a6a 0%,#6a8a94 50%,#a8c8d4 100%)">
+    <div class="day-hero-text">
+      <div class="day-hero-num">DAY 7 · 🔥</div>
+      <div class="day-hero-title">SEA TO SKY</div>
+      <div class="day-hero-sub">SHANNON FALLS · WHISTLER</div>
+    </div>
+  </div>
+  <div class="day-info">
+    <div class="day-heading">第 7 天 <span style="color:var(--muted);margin:0 2mm">·</span> <span class="en">Sea to Sky</span></div>
+    <div class="day-date-line">04.30 · THURSDAY <span style="color:var(--accent)">· 🔥 一日套票</span></div>
+    <div class="day-route">Agoda 方案 B · 接送+Gondola+Shannon Falls+Whistler+Porteau Cove</div>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">07:15</div>
+      <div class="tl-content">
+        <div class="main">早餐</div>
+        <div class="sub">飯店簡單吃或買 Tim Hortons 帶走</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">07:50</div>
+      <div class="tl-content">
+        <div class="main">Uber → Pan Pacific 集合</div>
+        <div class="sub">999 Canada Place · ~CAD $12 · 10 min</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">08:25</div>
+      <div class="tl-content">
+        <div class="main">Pan Pacific 上車</div>
+        <div class="sub">Agoda 方案 B 集合點</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">10:00</div>
+      <div class="tl-content">
+        <div class="main">Shannon Falls 瀑布</div>
+        <div class="sub">30 min · BC 第三高瀑布（335 m）</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">10:45</div>
+      <div class="tl-content">
+        <div class="main hl">Sea to Sky Gondola</div>
+        <div class="sub">2 hr · ✅ 門票已含套票</div>
+        <ul>
+          <li>🌉 Sky Pilot Suspension Bridge 吊橋</li>
+          <li>🥾 山頂步道（兩條循環路線）</li>
+          <li>📸 Howe Sound 俯瞰絕景</li>
+        </ul>
+        <div class="sub" style="margin-top:1mm"><strong>山頂可簡餐：</strong></div>
+        <ul>
+          <li>Co-Pilot Café · 輕食咖啡 ~$10–18</li>
+          <li>Sky Pilot Smokehouse · BBQ ~$18–28</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= Day 7 RIGHT (P15) ================= -->
+<div class="page day-page">
+  <div class="day-right-head">
+    <span class="lbl">DAY 7 · CONTINUED</span>
+    <span class="num">04.30</span>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">14:00</div>
+      <div class="tl-content">
+        <div class="main hl">Whistler Village 🔥</div>
+        <div class="sub">3 hr · 2010 冬奧主辦地 · 世界級滑雪度假村</div>
+        <div class="sub"><strong>建議在這裡吃午餐</strong></div>
+      </div>
+    </div>
+
+    <div class="list-box">
+      <div class="list-title">🍽️ Whistler 午餐</div>
+      <div class="li star"><span class="nm">⭐ Araxi</span><span class="px"> · Whistler 最有名 · 海鮮+加拿大料理 · ~$40–60</span></div>
+      <div class="li"><span class="nm">Hunter Gather</span><span class="px"> · Poutine、煙燻 BBQ 平價 · ~$25–35</span></div>
+      <div class="li"><span class="nm">Purebread</span><span class="px"> · 人氣烘焙咖啡館 · ~$10–18</span></div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">📸 必逛必拍</div>
+      · Whistler Village 步行區<br>
+      · 奧運五環地標 (Olympic Rings)<br>
+      · 精品店、戶外用品店
+    </div>
+
+    <div class="tl-row">
+      <div class="tl-time">18:00</div>
+      <div class="tl-content">
+        <div class="main">Porteau Cove Provincial Park</div>
+        <div class="sub">10 min · Howe Sound 海灣拍照點 · 回程最後停</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">18:30</div>
+      <div class="tl-content">
+        <div class="main">Downtown 解散 → Uber 回飯店</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">19:30</div>
+      <div class="tl-content">
+        <div class="main">晚餐</div>
+      </div>
+    </div>
+
+    <div class="list-box">
+      <div class="list-title">🍽️ 晚餐（飯店附近）</div>
+      <div class="li"><span class="nm">Cactus Club English Bay</span><span class="px"> · 海邊夕陽 · ~$25–40</span></div>
+      <div class="li"><span class="nm">Stepho's Souvlaki</span><span class="px"> · 希臘平價 · ~$15–22</span></div>
+      <div class="li"><span class="nm">Guu Gastown</span><span class="px"> · 日式居酒屋 · ~$25–35</span></div>
+    </div>
+
+    <div class="tip-box" style="border-left:2pt solid var(--accent)">
+      <div class="tip-title">🧥 穿搭建議</div>
+      山區較冷（Whistler 海拔高）<br>
+      <strong>羽絨外套 + 帽子 + 手套</strong> · 含高空吊橋與步行，穿好走鞋
+    </div>
+  </div>
+  <div class="corner-deco">🚡</div>
+</div>
+
+<!-- ================= Day 8 LEFT (P16) ================= -->
+<div class="page day-page">
+  <div class="day-hero" style="background:linear-gradient(135deg,#4a6a4a 0%,#7aa060 50%,#b4cc90 100%)">
+    <div class="day-hero-text">
+      <div class="day-hero-num">DAY 8</div>
+      <div class="day-hero-title">STANLEY PARK</div>
+      <div class="day-hero-sub">LAST DAY IN VANCOUVER</div>
+    </div>
+  </div>
+  <div class="day-info">
+    <div class="day-heading">第 8 天 <span style="color:var(--muted);margin:0 2mm">·</span> <span class="en">Last Day</span></div>
+    <div class="day-date-line">05.01 · FRIDAY <span style="color:var(--accent)">· 退房日</span></div>
+    <div class="day-route">Cora Breakfast ➜ Stanley Park ➜ 水族館 ➜ Robson 購物</div>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">08:00</div>
+      <div class="tl-content">
+        <div class="main hl">Cora Breakfast</div>
+        <div class="sub">1368 Robson St（飯店走路 10 min）</div>
+        <div class="sub">水果盤＋班尼迪克蛋必吃 · ~$20–28</div>
+        <div class="sub">💡 平日可訂位，建議提前預約</div>
+      </div>
+    </div>
+
+    <div class="tip-box" style="border-left:2pt solid var(--accent);background:rgba(200,72,58,0.12)">
+      <div class="tip-title" style="color:var(--accent)">🧳 09:00–09:30 退房（12:00 前必退）</div>
+      建議流程：<br>
+      <strong>07:30 整理 → 08:00 Cora → 09:00 退房 → 行李寄放 bell desk</strong><br>
+      晚上 20:30 去機場前回飯店拿行李
+    </div>
+
+    <div class="tl-row">
+      <div class="tl-time">09:30</div>
+      <div class="tl-content">
+        <div class="main">Stanley Park 史丹利公園</div>
+        <div class="sub">飯店走路/搭車約 15 min</div>
+        <ul>
+          <li>🚴 Seawall 海堤步道（可租腳踏車）</li>
+          <li>🪵 Brockton Point 圖騰柱 — 必拍</li>
+          <li>🌉 Prospect Point — 獅門大橋觀景</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">11:00</div>
+      <div class="tl-content">
+        <div class="main">Vancouver Aquarium</div>
+        <div class="sub">Stanley Park 內 · 海豚、白鯨、雨林</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">12:30</div>
+      <div class="tl-content">
+        <div class="main">午餐</div>
+        <div class="sub">Prospect Point Cafe（順路）或回 Robson St</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= Day 8 RIGHT (P17) ================= -->
+<div class="page day-page">
+  <div class="day-right-head">
+    <span class="lbl">DAY 8 · CONTINUED</span>
+    <span class="num">05.01</span>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">13:30</div>
+      <div class="tl-content">
+        <div class="main">Robson Street 最後購物</div>
+        <div class="sub">Aritzia · Lululemon · Sephora · Muji · Oomomo</div>
+      </div>
+    </div>
+
+    <div class="list-box">
+      <div class="list-title">🛍️ Stanley Park 園區店</div>
+      <div class="li"><span class="nm">Prospect Point Cafe</span><span class="px"> · 三明治+咖啡 · 獅門大橋景觀</span></div>
+      <div class="li"><span class="nm">Totem Poles Gift Shop</span><span class="px"> · 原住民手工藝品</span></div>
+    </div>
+
+    <div class="tl-row">
+      <div class="tl-time">18:00</div>
+      <div class="tl-content">
+        <div class="main">晚餐 · 最後一餐</div>
+        <div class="sub">Robson St 附近或回 English Bay 海邊</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">19:30</div>
+      <div class="tl-content">
+        <div class="main">回飯店領行李</div>
+        <div class="sub">bell desk 領回寄放行李 · 稍作休息</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">20:30</div>
+      <div class="tl-content">
+        <div class="main">Uber → YVR</div>
+        <div class="sub">飯店離 YVR 約 30 min</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">02:00</div>
+      <div class="tl-content">
+        <div class="main">CI 031 起飛（隔日 5/2）</div>
+      </div>
+    </div>
+
+    <div class="tip-box" style="border-left:2pt solid var(--accent)">
+      <div class="tip-title">💡 機場退稅</div>
+      · BC 省購物稅 12% 可退部分（需在機場辦理）<br>
+      · 免稅店還可最後採購（巧克力、楓糖）<br>
+      · 行動電源必須隨身攜帶
+    </div>
+
+    <div class="hotel-chip" style="background:#8a7560">
+      <div>
+        <div class="lbl">住宿</div>
+        <div class="nm">機場過夜</div>
+        <div class="ad">無住宿 · 於 YVR 候機</div>
+      </div>
+    </div>
+  </div>
+  <div class="corner-deco">🐻</div>
+</div>
+
+<!-- ================= Day 9 LEFT (P18) ================= -->
+<div class="page day-page">
+  <div class="day-hero" style="background:linear-gradient(135deg,#2a2e3a 0%,#4a5160 50%,#7a8290 100%)">
+    <div class="day-hero-text">
+      <div class="day-hero-num">DAY 9</div>
+      <div class="day-hero-title">HOMEWARD BOUND</div>
+      <div class="day-hero-sub">VANCOUVER → TAIPEI</div>
+    </div>
+  </div>
+  <div class="day-info">
+    <div class="day-heading">第 9 天 <span style="color:var(--muted);margin:0 2mm">·</span> <span class="en">Back to Taipei</span></div>
+    <div class="day-date-line">05.02 · SATURDAY</div>
+    <div class="day-route">YVR 深夜起飛 · 安全返台</div>
+  </div>
+  <div class="day-timeline">
+    <div class="tl-row">
+      <div class="tl-time">深夜</div>
+      <div class="tl-content">
+        <div class="main">YVR 機場候機</div>
+        <div class="sub">（接續 5/1 20:30 抵達機場）</div>
+        <div class="sub">無住宿 · 於 YVR 辦理登機手續、等候出發</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">02:00</div>
+      <div class="tl-content">
+        <div class="main hl">CI 031 · YVR → TPE</div>
+        <div class="sub">中華航空 · 飛行約 12h 30m</div>
+        <div class="sub">時差 +15h · 溫哥華深夜出發</div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-time">06:30</div>
+      <div class="tl-content">
+        <div class="main">抵達桃園機場</div>
+        <div class="sub">05.03（+1 天）清晨</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">💡 返程小撇步</div>
+      · YVR 有 24h Tim Hortons（最後一餐）<br>
+      · 行動電源檢查不可託運<br>
+      · 退稅櫃檯在安檢前
+    </div>
+  </div>
+</div>
+
+<!-- ================= Day 9 RIGHT (P19) ================= -->
+<div class="page day-page">
+  <div class="day-right-head">
+    <span class="lbl">DAY 9 · CONTINUED</span>
+    <span class="num">05.02</span>
+  </div>
+  <div class="day-timeline" style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20mm 15mm">
+    <div style="font-size:40pt;color:var(--leaf);margin-bottom:6mm;line-height:1">🍁</div>
+    <div style="font-size:16pt;font-weight:700;letter-spacing:0.3em;color:var(--ink);padding-left:0.3em;margin-bottom:4mm">旅 途 平 安</div>
+    <div style="font-size:9pt;color:var(--muted);letter-spacing:0.35em;font-style:italic;margin-bottom:14mm">Safe Travels Home</div>
+
+    <div style="width:100%;border-top:0.5pt dashed var(--line);padding-top:6mm;margin-top:2mm">
+      <div style="text-align:center;font-size:8pt;color:var(--ink-soft);line-height:2;letter-spacing:0.05em">
+        九天的加拿大，我們走過<br>
+        太平洋的海灣與洛磯山的雪峰<br>
+        在 Cafe Medina 的早晨醒來<br>
+        在 Peyto Lake 的天青色湖水前屏息<br>
+        在 Banff Gondola 的夕陽下合影<br>
+        這些記憶，會一直留著。
+      </div>
+    </div>
+  </div>
+  <div class="corner-deco">🌅</div>
+</div>
+
+<!-- ================= P20 行前準備 LEFT ================= -->
+<div class="page">
+  <div class="section-title">行 前 準 備</div>
+  <div class="check-page-sh">重要物品</div>
+  <div class="checklist-grid">
+    <div class="chk"><div class="chk-box filled"></div>手冊</div>
+    <div class="chk"><div class="chk-box filled"></div>機票</div>
+    <div class="chk"><div class="chk-box filled"></div>護照</div>
+    <div class="chk"><div class="chk-box filled"></div>加幣</div>
+    <div class="chk"><div class="chk-box filled"></div>eTA</div>
+    <div class="chk"><div class="chk-box"></div>信用卡</div>
+    <div class="chk"><div class="chk-box"></div>國際駕照</div>
+    <div class="chk"><div class="chk-box"></div>保險單</div>
+    <div class="chk"><div class="chk-box"></div>充電器</div>
+    <div class="chk"><div class="chk-box"></div>行動電源</div>
+    <div class="chk"><div class="chk-box"></div>eSIM</div>
+    <div class="chk"><div class="chk-box"></div>耳機</div>
+    <div class="chk"><div class="chk-box"></div>相機</div>
+    <div class="chk"><div class="chk-box"></div>轉接頭</div>
+    <div class="chk"><div class="chk-box"></div>訂房確認</div>
+    <div class="chk"><div class="chk-box"></div>租車確認</div>
+  </div>
+
+  <div class="check-page-sh">衣物（山區保暖）</div>
+  <div class="checklist-grid">
+    <div class="chk"><div class="chk-box"></div>防水外套</div>
+    <div class="chk"><div class="chk-box"></div>羽絨內層</div>
+    <div class="chk"><div class="chk-box"></div>登山鞋</div>
+    <div class="chk"><div class="chk-box"></div>手套</div>
+    <div class="chk"><div class="chk-box"></div>毛帽</div>
+    <div class="chk"><div class="chk-box"></div>圍巾</div>
+    <div class="chk"><div class="chk-box"></div>太陽眼鏡</div>
+    <div class="chk"><div class="chk-box"></div>長褲</div>
+  </div>
+
+  <div class="check-page-sh">個人用品</div>
+  <div class="checklist-grid">
+    <div class="chk"><div class="chk-box"></div>盥洗用具</div>
+    <div class="chk"><div class="chk-box"></div>防曬乳</div>
+    <div class="chk"><div class="chk-box"></div>護唇膏</div>
+    <div class="chk"><div class="chk-box"></div>乳液</div>
+    <div class="chk"><div class="chk-box"></div>常備藥</div>
+    <div class="chk"><div class="chk-box"></div>衛生紙</div>
+    <div class="chk"><div class="chk-box"></div>購物袋</div>
+    <div class="chk"><div class="chk-box"></div>零食</div>
+  </div>
+
+  <svg style="position:absolute;bottom:3mm;right:5mm;width:28mm;height:28mm" viewBox="0 0 100 100">
+    <g stroke="#2b2a26" stroke-width="1.2" stroke-linejoin="round">
+      <ellipse cx="50" cy="70" rx="28" ry="22" fill="#a87346"/>
+      <circle cx="50" cy="42" r="22" fill="#a87346"/>
+      <circle cx="34" cy="25" r="7" fill="#a87346"/>
+      <circle cx="66" cy="25" r="7" fill="#a87346"/>
+      <circle cx="34" cy="25" r="3.5" fill="#7a5230"/>
+      <circle cx="66" cy="25" r="3.5" fill="#7a5230"/>
+      <ellipse cx="50" cy="50" rx="10" ry="8" fill="#e6c8a0"/>
+      <circle cx="42" cy="38" r="2" fill="#2b2a26"/>
+      <circle cx="58" cy="38" r="2" fill="#2b2a26"/>
+      <ellipse cx="50" cy="47" rx="2.5" ry="1.8" fill="#2b2a26"/>
+      <path d="M48 53 Q50 55 52 53" fill="none" stroke="#2b2a26" stroke-width="1"/>
+      <path d="M28 58 Q50 66 72 58 L70 66 Q50 72 30 66z" fill="#c8483a"/>
+    </g>
+  </svg>
+</div>
+
+<!-- ================= P21 行程總覽 RIGHT ================= -->
+<div class="page">
+  <div class="section-title">行 程 總 覽</div>
+  <div style="padding:2mm 12mm 0">
+
+    <div style="display:grid;grid-template-columns:16mm 1fr;gap:3mm;align-items:center;margin-bottom:3mm">
+      <div style="width:14mm;height:14mm;border-radius:50%;background:var(--pine-dark);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:5.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:12pt;font-weight:700">1</div></div>
+      <div><div style="font-size:9pt;font-weight:700">TPE → Vancouver</div><div style="font-size:7pt;color:var(--muted)">04.24 · 旋轉餐廳夜景</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:16mm 1fr;gap:3mm;align-items:center;margin-bottom:3mm">
+      <div style="width:14mm;height:14mm;border-radius:50%;background:var(--pine-dark);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:5.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:12pt;font-weight:700">2</div></div>
+      <div><div style="font-size:9pt;font-weight:700">市區經典日</div><div style="font-size:7pt;color:var(--muted)">04.25 · Gastown · Granville Island</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:16mm 1fr;gap:3mm;align-items:center;margin-bottom:3mm">
+      <div style="width:14mm;height:14mm;border-radius:50%;background:var(--pine-dark);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:5.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:12pt;font-weight:700">3</div></div>
+      <div><div style="font-size:9pt;font-weight:700">飛 Calgary</div><div style="font-size:7pt;color:var(--muted)">04.26 · 購物 · Stephen Ave</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:16mm 1fr;gap:3mm;align-items:center;margin-bottom:3mm">
+      <div style="width:14mm;height:14mm;border-radius:50%;background:var(--pine-dark);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:5.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:12pt;font-weight:700">4</div></div>
+      <div><div style="font-size:9pt;font-weight:700">進入 Banff</div><div style="font-size:7pt;color:var(--muted)">04.27 · Gondola 夕陽</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:16mm 1fr;gap:3mm;align-items:center;margin-bottom:3mm">
+      <div style="width:14mm;height:14mm;border-radius:50%;background:var(--accent);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:5.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:12pt;font-weight:700">5</div></div>
+      <div><div style="font-size:9pt;font-weight:700">冰原大道自駕 🔥</div><div style="font-size:7pt;color:var(--muted)">04.28 · Lake Louise · Peyto</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:16mm 1fr;gap:3mm;align-items:center;margin-bottom:3mm">
+      <div style="width:14mm;height:14mm;border-radius:50%;background:var(--pine-dark);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:5.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:12pt;font-weight:700">6</div></div>
+      <div><div style="font-size:9pt;font-weight:700">回到海岸</div><div style="font-size:7pt;color:var(--muted)">04.29 · 還車 · English Bay</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:16mm 1fr;gap:3mm;align-items:center;margin-bottom:3mm">
+      <div style="width:14mm;height:14mm;border-radius:50%;background:var(--accent);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:5.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:12pt;font-weight:700">7</div></div>
+      <div><div style="font-size:9pt;font-weight:700">Sea to Sky 🔥</div><div style="font-size:7pt;color:var(--muted)">04.30 · Shannon Falls · Whistler</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:16mm 1fr;gap:3mm;align-items:center;margin-bottom:3mm">
+      <div style="width:14mm;height:14mm;border-radius:50%;background:var(--pine-dark);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:5.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:12pt;font-weight:700">8</div></div>
+      <div><div style="font-size:9pt;font-weight:700">Stanley Park 購物</div><div style="font-size:7pt;color:var(--muted)">05.01 · 水族館 · Robson</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:16mm 1fr;gap:3mm;align-items:center;margin-bottom:3mm">
+      <div style="width:14mm;height:14mm;border-radius:50%;background:var(--pine-dark);color:#fdfaf5;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><div style="font-size:5.5pt;letter-spacing:0.2em">DAY</div><div style="font-size:12pt;font-weight:700">9</div></div>
+      <div><div style="font-size:9pt;font-weight:700">Vancouver → TPE</div><div style="font-size:7pt;color:var(--muted)">05.02 · CI 031 返程</div></div>
+    </div>
+
+    <div class="tip-box" style="margin-top:4mm">
+      <div class="tip-title">💱 匯率提醒</div>
+      1 CAD ≈ 22.2 TWD · 出發前請確認實際匯率
+    </div>
+  </div>
+</div>
+
+<!-- ================= P22 住宿 LEFT ================= -->
+<div class="page">
+  <div class="section-title">住 宿 資 訊</div>
+  <div class="hotel-section">
+    <div class="hotel-card">
+      <div class="hotel-title">EXchange Hotel Vancouver</div>
+      <div class="hotel-sub">Downtown Vancouver · Heritage Building</div>
+      <div class="hotel-dates">04.24 – 04.26　2 nights</div>
+      <div class="hotel-detail">
+        <div class="lbl">地址</div><div>475 Howe St, Vancouver, BC</div>
+        <div class="lbl">周邊</div><div>Gastown 步行 8 分 · Robson 步行 12 分</div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-title">The Westley Calgary Downtown</div>
+      <div class="hotel-sub">Tapestry Collection by Hilton</div>
+      <div class="hotel-dates">04.26 – 04.27　1 night</div>
+      <div class="hotel-detail">
+        <div class="lbl">周邊</div><div>Stephen Ave 5 分 · Crescent Lookout 10 分</div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-title">Hotel Canoe and Suites</div>
+      <div class="hotel-sub">Banff, Alberta</div>
+      <div class="hotel-dates">04.27 – 04.28　1 night</div>
+      <div class="hotel-detail">
+        <div class="lbl">周邊</div><div>Vermilion Lakes 5 分 · Banff Ave 10 分</div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-title">Mountaineer Lodge</div>
+      <div class="hotel-sub">Lake Louise, Alberta</div>
+      <div class="hotel-dates">04.28 – 04.29　1 night</div>
+      <div class="hotel-detail">
+        <div class="lbl">周邊</div><div>Lake Louise Village · The Station Restaurant</div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-title">Best Western Plus Sands ⭐⭐⭐</div>
+      <div class="hotel-sub">Vancouver West End · English Bay</div>
+      <div class="hotel-dates">04.29 – 05.01　2 nights</div>
+      <div class="hotel-detail">
+        <div class="lbl">地址</div><div>1755 Davie Street, Vancouver, BC V6G 1W5</div>
+        <div class="lbl">電話</div><div>+1 604-682-1831</div>
+        <div class="lbl">周邊</div><div>English Bay 海灘 3 分 · Stanley Park 15 分</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= P23 緊急 RIGHT ================= -->
+<div class="page">
+  <div class="section-title">緊 急 資 訊</div>
+  <div class="emg-grid">
+    <div class="emg-box warn">
+      <h4>🚨 緊急求助</h4>
+      <div class="num-big">911</div>
+      <p>Police / Fire / Medical · 全境通用</p>
+    </div>
+    <div class="emg-box">
+      <h4>🇹🇼 駐溫哥華辦事處</h4>
+      <div style="font-size:10pt;font-weight:700;color:var(--ink)">+1 604-689-4111</div>
+      <p>Suite 2200, 650 West Georgia St</p>
+      <p style="color:var(--accent);font-weight:700">急難救助 24h<br>+1 604-377-8730</p>
+    </div>
+  </div>
+
+  <div class="sh" style="padding:0 12mm;margin-top:5mm">航班 · 回程</div>
+  <div style="padding:0 12mm;font-size:8pt">
+    <div style="margin:2mm 0"><strong>去程 CI 032</strong>　TPE 23:35 → YVR 19:20（4/24 同日）</div>
+    <div style="margin:2mm 0"><strong>回程 CI 031</strong>　YVR 02:00 → TPE 06:30（5/3 +1天）</div>
+    <div style="margin:2mm 0;color:var(--muted)">加拿大客服　+1 800-227-5118</div>
+  </div>
+
+  <div class="sh" style="padding:0 12mm;margin-top:4mm">實用提醒</div>
+  <div style="padding:0 12mm;font-size:7.5pt;line-height:1.6">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3mm;margin-top:1mm">
+      <div>
+        <strong style="color:var(--accent)">🕐 時差</strong><br>
+        Vancouver (PDT) UTC−7 · 比台灣慢 15h<br>
+        Banff/Calgary (MDT) UTC−6 · 慢 14h
+      </div>
+      <div>
+        <strong style="color:var(--accent)">🔌 電壓</strong><br>
+        110–120V · 60Hz<br>
+        插座 Type A/B（同台灣）
+      </div>
+      <div>
+        <strong style="color:var(--accent)">💵 小費</strong><br>
+        餐廳 15–20% · Uber 10–15%<br>
+        行李員 每件 CAD $2
+      </div>
+      <div>
+        <strong style="color:var(--accent)">📱 網路</strong><br>
+        eSIM：Airalo / Ubigi<br>
+        電信：Rogers · Telus
+      </div>
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin:4mm 12mm 0">
+    <div class="tip-title">🎫 必記資訊</div>
+    · Parks Canada 3-day Pass $63（Banff 入口買）<br>
+    · eTA 5 年效期 · ArriveCAN 飛行前 72h 填<br>
+    · YYC 還車 <strong style="color:var(--accent)">必須 4/29 14:30 前</strong>
+  </div>
+</div>
+
+<!-- ================= P24 封底 ================= -->
+<div class="page back-cover">
+  <div class="back-inner">
+    <svg class="back-mountain" viewBox="0 0 200 180">
+      <path d="M0 120 L30 80 L55 95 L85 55 L115 85 L145 60 L175 90 L200 75 L200 180 L0 180z" fill="#8a7a5c" stroke="#2b2a26" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M85 55 L95 72 L80 76 L78 64 M145 60 L155 78 L138 82 L135 66" fill="none" stroke="#2b2a26" stroke-width="1"/>
+      <path d="M0 150 L25 115 L55 135 L95 100 L135 135 L170 115 L200 140 L200 180 L0 180z" fill="#5a4d3a" stroke="#2b2a26" stroke-width="1.5" stroke-linejoin="round"/>
+      <g stroke="#2b2a26" stroke-width="1.2" fill="#2e4a2e" stroke-linejoin="round">
+        <path d="M30 155 L25 150 L28 150 L23 143 L27 143 L22 135 L38 135 L33 143 L37 143 L32 150 L35 150 L30 155z"/>
+        <path d="M170 155 L165 150 L168 150 L163 143 L167 143 L162 135 L178 135 L173 143 L177 143 L172 150 L175 150 L170 155z"/>
+      </g>
+      <g fill="#c43d2a" stroke="#8a1e0f" stroke-width="1" stroke-linejoin="round">
+        <path d="M100 22 L106 8 L110 15 L118 2 L117 15 L128 10 L120 20 L133 25 L120 28 L126 38 L114 32 L113 42 L108 34 L102 42 L100 32 L90 35 L96 28 L86 24 L96 22 L86 14 L98 16 L94 4 L102 10z" transform="translate(0 0) scale(0.7)"/>
+      </g>
+    </svg>
+    <div class="back-year">2026</div>
+    <div class="back-names">CANADA</div>
+    <div class="back-route">Vancouver · Banff · Lake Louise · Whistler</div>
+    <div class="back-stamp">春</div>
+  </div>
+</div>
+
+</body>
+</html>

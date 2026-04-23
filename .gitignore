@@ -1,0 +1,10 @@
+# Print artifacts (regenerate locally, don't track)
+*.pdf
+
+# Working/temp folders
+tmp/
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
