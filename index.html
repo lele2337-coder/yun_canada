@@ -431,6 +431,119 @@ li { margin: 3px 0; }
 
 /* ── Footer ── */
 footer { text-align: center; color: var(--muted); font-size: 0.8em; margin-top: 24px; }
+
+/* ── Print styles (for PDF export) ── */
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm 12mm;
+  }
+  html, body {
+    background: white !important;
+    color: #1a1a1a !important;
+    font-size: 10pt;
+    padding-bottom: 0;
+  }
+  /* Hide interactive / nav / screen-only elements */
+  .topbar, .dark-toggle, .countdown, .infostrip, .currency-card,
+  .checklist-actions, .pretask-progress, .progress-bar,
+  #en-summary, footer, .map-btn, .task-link, .btn-sm,
+  .overview-link, .rate-note {
+    display: none !important;
+  }
+  /* Header compact */
+  header {
+    background: #9c6b3c !important;
+    color: white !important;
+    padding: 14px 16px !important;
+    margin-bottom: 14px !important;
+    box-shadow: none !important;
+    border-radius: 6px !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  header::before { display: none !important; }
+  header h1 { font-size: 18pt !important; margin-bottom: 4px !important; }
+  header p { font-size: 10pt !important; }
+  .container { padding: 0 !important; max-width: 100% !important; }
+  /* Day cards */
+  .day {
+    page-break-before: always;
+    page-break-inside: avoid;
+    background: white !important;
+    box-shadow: none !important;
+    border: 1px solid #c4a580 !important;
+    border-radius: 6px !important;
+    padding: 12px 14px !important;
+    margin-bottom: 10px !important;
+  }
+  .day:first-of-type { page-break-before: auto; }
+  .day h2 {
+    font-size: 14pt !important;
+    color: #7a4f28 !important;
+    border-bottom: 2px solid #c4a580;
+    padding-bottom: 4px;
+    margin-bottom: 8px !important;
+  }
+  .today-badge { display: none !important; }
+  /* Sections inside day */
+  .section {
+    background: #faf5ec !important;
+    border-left: 3px solid #9c6b3c !important;
+    padding: 6px 10px !important;
+    margin: 6px 0 !important;
+    border-radius: 3px !important;
+    page-break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .section h3 {
+    font-size: 10.5pt !important;
+    color: #7a4f28 !important;
+    margin-bottom: 4px !important;
+  }
+  .section p, .section li { font-size: 9.5pt !important; line-height: 1.45 !important; }
+  .section ul { margin-left: 18px; margin-top: 2px; }
+  .time-badge {
+    background: #9c6b3c !important;
+    color: white !important;
+    font-size: 8pt !important;
+    padding: 1px 6px !important;
+    border-radius: 3px !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .highlight { font-weight: 700; }
+  /* Overview table */
+  .overview {
+    page-break-after: always;
+    page-break-inside: avoid;
+    background: white !important;
+    box-shadow: none !important;
+  }
+  .overview table { font-size: 9.5pt !important; width: 100%; }
+  .overview th { background: #9c6b3c !important; color: white !important; -webkit-print-color-adjust: exact; }
+  /* Pretask & checklist — simpler */
+  .pretask-card, .checklist-card {
+    page-break-before: always;
+    page-break-inside: auto;
+    background: white !important;
+    box-shadow: none !important;
+    border: 1px solid #c4a580 !important;
+  }
+  .pretask-item, .checklist-item {
+    page-break-inside: avoid;
+    padding: 4px 0 !important;
+  }
+  .pretask-item .task-name { font-size: 9.5pt !important; }
+  .pretask-item .task-note { font-size: 8.5pt !important; }
+  a { color: inherit !important; text-decoration: none !important; }
+  /* Keep small urgent / ok badges visible */
+  .urgent-badge, .ok-badge, .soon-badge {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
 </style>
 </head>
 <body>
@@ -658,20 +771,51 @@ footer { text-align: center; color: var(--muted); font-size: 0.8em; margin-top: 
       <li><strong>Japadog</strong>　<span style="font-size:0.82em;color:var(--muted)">~CAD $8–12 · Robson 街頭名物日式熱狗</span>　<a class="map-btn" href="https://maps.google.com/?q=Japadog+Robson+Vancouver" target="_blank">📍</a></li>
     </ul>
   </div>
+  <div class="section" style="border:2px solid var(--sea);background:var(--section-bg)">
+    <h3>🚢 去程 Robson → Hornby Street Dock → Granville Island <span class="time-badge">15:15–15:35</span></h3>
+    <p><strong>📍 路線：</strong>逛完 Robson 後，從 Hornby St 往南一路走 (可順逛 Hornby 上的店) → 走到底 <strong>Hornby St ＆ Beach Ave</strong> 交叉口 → 過馬路即 <strong>Hornby Street Aquabus Dock</strong>（David Lam Park 旁邊）</p>
+    <p style="font-size:0.9em;color:var(--muted)">⏱️ 步行約 <strong>12–15 分鐘</strong>（約 10 個街區，一路下坡到海邊）</p>
+    <div style="background:#fff7e6;border-left:3px solid var(--accent);padding:10px 14px;margin:10px 0;border-radius:4px">
+      <p style="margin:0 0 6px"><strong>⚠️ 注意：這站只有 Aquabus</strong>（彩色小船）</p>
+      <p style="margin:0;font-size:0.88em;color:var(--muted)">另一家 False Creek Ferries 不停這站，他們只停在西邊的 Aquatic Centre（Thurlow St 口，Sunset Beach 旁）。想搭 Aquabus 就直接來 Hornby。</p>
+    </div>
+    <ul>
+      <li>🚤 <strong>Aquabus</strong>（rainbow ferry）· 5 分鐘就到 Granville Island</li>
+      <li>💰 單程 <strong>CAD $4</strong>（成人），上船付現或刷卡</li>
+      <li>⏱️ 每 <strong>5–15 分鐘</strong> 一班，07:00–21:15 營運</li>
+      <li>📸 彩色船身 + False Creek 景色，拍照點</li>
+    </ul>
+    <a class="map-btn" href="https://maps.google.com/?q=Aquabus+Hornby+Street+Dock+Vancouver" target="_blank">📍 Hornby Aquabus Dock</a>
+    <a class="map-btn" href="https://maps.google.com/maps/dir/Robson+Street+%26+Hornby+Vancouver/Aquabus+Hornby+Street+Dock+Vancouver/" target="_blank">🚶 Robson→碼頭導航</a>
+    <a class="map-btn" href="https://theaquabus.com/" target="_blank">🌐 Aquabus 官網</a>
+  </div>
   <div class="section">
-    <h3>🚤 Granville Island <span class="time-badge">15:30–17:30</span></h3>
-    <p>搭 <strong>False Creek Ferry</strong> 前往　約 10 分鐘　CAD $5–8</p>
+    <h3>🚤 Granville Island <span class="time-badge">15:35–17:45</span></h3>
     <ul>
       <li>🧺 Public Market — 必逛美食市集</li>
       <li>🚶 碼頭散步、甜點小吃</li>
     </ul>
     <a class="map-btn" href="https://maps.google.com/?q=Granville+Island+Vancouver" target="_blank">📍 地圖</a>
-    <a class="map-btn" href="https://maps.google.com/?q=False+Creek+Ferry+Vancouver" target="_blank">🚢 渡船乘車點</a>
   </div>
   <div class="section">
     <h3>🧸 Kaboodles Toy Store — 買 Jellycat <span class="time-badge">Granville Island 內</span></h3>
     <p>Jellycat 官方認證經銷商，價格跟官網一樣，是 Vancouver 款式最齊全之一</p>
     <a class="map-btn" href="https://maps.google.com/?q=Kaboodles+Toy+Store+Granville+Island+Vancouver" target="_blank">📍 地圖</a>
+  </div>
+  <div class="section" style="border:2px solid var(--accent);background:var(--section-bg)">
+    <h3>🚗 回程 Granville Island → Coal Harbour <span class="time-badge">17:50</span></h3>
+    <p><strong>⚠️ 不要搭渡輪回去！</strong>Coal Harbour 在 downtown 的<strong>北邊</strong>，<strong>所有渡輪都只跑南邊的 False Creek 內灣</strong>，沒有船到北岸</p>
+    <p><strong>推薦：直接 Uber / Lyft 從島上出口上車</strong>（晚餐 18:30 要準時）</p>
+    <ul>
+      <li>🚗 <strong>Uber / Lyft</strong>（最快）· 車程 10–15 分鐘 · 過 Granville Bridge 直達 · ~CAD $15–20（下班尖峰可能 $20–25）</li>
+    </ul>
+    <p style="margin-top:12px;font-size:0.92em"><strong>備案：</strong></p>
+    <ul style="font-size:0.9em">
+      <li>🚤 搭 Aquabus 原路回 Hornby Street Dock（5 min）→ 再 Uber 去 Coal Harbour（5 min, ~$10）· 總共貴一點但可以再搭一次船</li>
+      <li>🚌 公車 <strong>#50 False Creek South</strong>（Granville Island 站）→ downtown 轉 <strong>SeaBus / 4 / 7</strong> 號線到 Waterfront · ~30 min · CAD $3.20 · 最便宜但最慢</li>
+      <li>🚶 徒步過 Granville Bridge → downtown → Coal Harbour · ~35 分鐘 · 風景好但趕時間不建議</li>
+    </ul>
+    <a class="map-btn" href="https://maps.google.com/maps/dir/Granville+Island+Vancouver/Coal+Harbour+Vancouver" target="_blank">🗺️ 回程路線</a>
   </div>
   <div class="section">
     <h3>🍽️ 晚餐　Coal Harbour 海景 <span class="time-badge">18:30</span></h3>
